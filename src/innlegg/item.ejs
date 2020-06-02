@@ -3,7 +3,7 @@
 <header class="header">
 
     <div class="header__left">
-        <a href="../index.html" class="header__link">
+        <a href="/" class="header__link">
             &larr; Alle innlegg</a>
     </div>
 
@@ -20,7 +20,7 @@
 
 <h1><%= title %></h1>
 
-<p><em>Posted on <%= date.toISOString().substr(0, 10) %>.</em></p>
+<p>Publisert <%= date.toISOString().substr(0, 10) %>.</p>
 
 <%- body %> <%- include('../_footer.ejs') -%>
 
