@@ -30,6 +30,7 @@ jobs:
         name: dist
         path: dist
 
+    ## Upload to ftp server
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
