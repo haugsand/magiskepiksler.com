@@ -37,5 +37,5 @@ jobs:
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: "dist"
-        remoteDir: "magiskepiksler.com"
+        remoteDir: "/home/haugsand/magiskepiksler.com"
 
