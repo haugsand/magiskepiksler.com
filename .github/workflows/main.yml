@@ -22,7 +22,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build artifacts
-      run: npm run build
+      run: npx tinyjam src build
 
 
         
