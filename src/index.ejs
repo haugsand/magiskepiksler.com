@@ -1,0 +1,35 @@
+<%- include('_header.ejs') -%>
+
+
+<header class="header">
+
+    <div class="header__left">
+    </div>
+
+
+    <div class="header__center">
+        <h1 aria-label="Magiske piksler" class="compact">
+            <%- include('_logo.ejs') -%>
+        </h1>
+    </div>
+
+    <div class="header__right">
+
+</header>
+
+
+<section class="articlelist">
+    <% for (const name of Object.keys(innlegg).reverse()) { const {date, title,
+    body} = innlegg[name]; -%>
+    <article class="articlelist__article">
+        <p class="articlelist__date"><%= date.toISOString().substr(0, 10) %></p>
+        <p class="articlelist__title">
+            <a href="innlegg/<%= name %>.html" class="articlelist__link">
+                <%= title %>
+            </a>
+        </p>
+    </article>
+    <% } -%>
+</section>
+
+<%- include('_footer.ejs') -%>

@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --white: #FFFFFF;
+  --black: #000000;
+  --grey-50: #F7F7F7;
+  --grey-100: #D8D8D8;
+  --grey-200: #B9B9B9;
+  --grey-300: #9A9A9A;
+  --grey-400: #7B7B7B;
+  --grey-500: #5C5C5C;
+  --grey-600: #4A4A4A;
+  --grey-700: #373737;
+  --grey-800: #252525;
+  --grey-900: #121212;
+  --purple-50: #FFF8FC;
+  --purple-100: #FDEEF6;
+  --purple-200: #FBCBE2;
+  --purple-300: #FAA8D1;
+  --purple-400: #DB77A9;
+  --purple-500: #BD4D85;
+  --purple-600: #A52263;
+  --purple-700: #8D0046;
+  --purple-800: #75003A;
+  --purple-900: #5C002E;
+  --red-50: #FFF4F4;
+  --red-100: #FFE9E9;
+  --red-200: #FFC9C9;
+  --red-300: #FFAAAA;
+  --red-400: #E07A79;
+  --red-500: #C05052;
+  --red-600: #AB323A;
+  --red-700: #8D0707;
+  --red-800: #730303;
+  --red-900: #590000;
+  --brown-50: #FEFAF5;
+  --brown-100: #FEEEDF;
+  --brown-200: #FEDBB8;
+  --brown-300: #FDC791;
+  --brown-400: #D69859;
+  --brown-500: #AF6F2E;
+  --brown-600: #965514;
+  --brown-700: #7E3F00;
+  --brown-800: #653300;
+  --brown-900: #4D2600;
+  font-size: 6.25%;
+}
+
+body {
+  background: var(--white) url(../gfx/bgtop.png) repeat-x 50% 0%;
+  color: var(--grey-800);
+  font-weight: 300;
+  line-height: 28rem;
+  font-size: 18rem;
+  padding-bottom: 70rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+main {
+  max-width: 600rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 36rem;
+  line-height: 42rem;
+  font-weight: 500;
+  margin-bottom: 28rem;
+}
+
+.compact {
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 35rem;
+}
+
+h2 {
+  font-size: 24rem;
+  line-height: 28rem;
+  font-weight: 500;
+  margin-top: 56rem;
+  margin-bottom: 28rem;
+}
+
+p {
+  margin-bottom: 28rem;
+}
+
+ul {
+  margin-bottom: 28rem;
+}
+
+a {
+  color: var(--purple-500);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--purple-800);
+}
+
+code {
+  background-color: var(--brown-50);
+  color: var(--brown-900);
+  font-weight: 300;
+  font-size: 16rem;
+  padding: 4rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+pre {
+  background-color: var(--brown-50);
+  margin-bottom: 28rem;
+  padding: 21rem 28rem;
+  font-size: 14rem;
+  line-height: 21rem;
+}
+
+pre code {
+  background: none;
+  font-size: inherit;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 70rem 0;
+}
+
+.header__left,
+.header__right {
+  flex: 1;
+  line-height: 35rem;
+}
+
+.header__center {
+  flex: 0;
+}
+
+.header__link {
+  font-weight: 500;
+  font-size: 14rem;
+}
+
+.articlelist {
+}
+
+.articlelist__article {
+  text-align: center;
+  margin-bottom: 28rem;
+}
+
+.articlelist__date {
+  font-size: 14rem;
+  margin-bottom: 0;
+}
+
+.articlelist__title {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.articlelist__link {
+
+}
+
+
+.mp__magiske-piksler {
+  --ratio: 5px;
+  --color: #000;
+  margin: 0 auto;
+  position: relative;
+  width: calc(var(--ratio)*52);
+  height: calc(var(--ratio)*7);
+}
+
+.mp__magiske {
+  position: absolute;
+  width: calc(var(--ratio)*27);
+  height: calc(var(--ratio)*7);
+  top: 0;
+  left: 0;
+}
+
+.mp__piksler {
+  position: absolute;
+  width: calc(var(--ratio)*22);
+  height: calc(var(--ratio)*7);
+  top: 0;
+  left: calc(var(--ratio)*30);
+}
+
+
+.mp__magiske-piksler span {
+  position: absolute;
+  width: var(--ratio);
+  height: var(--ratio);
+  background-color: var(--color);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+@media (max-width: 40em) {
+  body {
+    font-size: 14rem;
+    line-height: 21rem;
+    padding: 0 21rem 35rem 21rem;
+  }
+
+  p {
+    margin-bottom: 21rem;
+  }
+
+  h1 {
+    margin-bottom: 21rem;
+    line-height: 28rem;
+    font-size: 24rem;
+  }
+
+  h2 {
+    margin-bottom: 21rem;
+    margin-top: 42rem;
+    font-size: 18rem;
+  }
+
+  code {
+    font-size: 12rem;
+  }
+
+  pre {
+    font-size: 12rem;
+    line-height: 14rem;
+    margin-bottom: 21rem;
+    margin-left: -21rem;
+    margin-right: -21rem;
+    padding: 14rem 21rem;
+    overflow-x: auto;
+  }
+
+  .header {
+    flex-direction: column-reverse;
+    margin: 35rem 0;
+  }
+
+  .header__right {
+    display: none;
+  }
+
+  .header__left {
+    text-align: center;
+    margin-top: 14rem;
+  }
+}

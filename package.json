@@ -1,0 +1,15 @@
+{
+    "name": "magiskepiksler.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/index.html",
+    "scripts": {
+        "build": "rm -rf build && tinyjam src build",
+        "start": "serve build -l 4000"
+    },
+    "author": "Magnus Haugsand",
+    "devDependencies": {
+        "tinyjam": "^0.2.0",
+        "serve": "^11.3.1"
+    }
+}
