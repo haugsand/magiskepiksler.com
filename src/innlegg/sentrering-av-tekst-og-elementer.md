@@ -3,6 +3,10 @@ title: Sentrering av tekst og elementer
 date: 2004-02-23
 ---
 
+Denne artikkelen ble opprinnelig skrevet i 2004. Det har skjedd en rivende utvikling innenfor standardisering og nettlesere siden den gang, så innholdet nedenfor er ikke like relevant i dag. Artikkelen gjøres likevel tilgjengelig her av historiske og nostalgiske årsaker. Det er gjort noen få justeringer i ettertid, for å øke lesbarheten.
+
+
+
 ## Bakgrunn
 
 Elementet `center` er [utdatert](http://www.w3.org/TR/html401/conform.html#deprecated), og har for lenge siden blitt erstattet med nyere begrep. Et utdatert element støttes fremdeles i nettleserne, men bare for bakoverkompatibilitet. Sjansene er store for at slike element senere [utgår](http://www.w3.org/TR/html401/conform.html#didx-obsolete), uten noen form for definisjon i spesifikasjonene eller nettleserstøtte. I denne artikkelen vil de nyere metodene for sentrering bli gjennomgått. 
@@ -13,7 +17,7 @@ Men, her er det også noen unntak ute og går. Det finnes nemlig flere versjoner
 
 ## Sentrering av tekst
 
-For å sentrere tekst, bilder eller annet [inline](http://www.w3.org/TR/REC-CSS2/visuren.html#q7)-innhold, legges `text-align: center;` til det elementet som innholdet står innenfor. I eksemplet nedenfor vil tekst innenfor et bestemt avsnitt bli sentrert.
+For å sentrere tekst, bilder eller annet [inline](https://www.w3.org/TR/CSS2/visuren.html#inline-boxes)-innhold, legges `text-align: center;` til det elementet som innholdet står innenfor. I eksemplet nedenfor vil tekst innenfor et avsnitt bli sentrert.
 
 ```
 p {
@@ -24,13 +28,13 @@ p {
 ```
 <p>
   Denne teksten står midt inne i avsnittet.<br>
-  Det gjør også denne!<br>
+  Det gjør også denne!
 </p>
 ```
 
 ## Sentrering av blokker
 
-Siden `text-align` bare gjelder for inline-innhold, brukes det en annen metode for å få [blokkelement](http://www.w3.org/TR/REC-CSS2/visuren.html#q5) stående midt på siden. Blokkelement tar vanligvis opp all tilgjengelig plass i bredden, så det må angis `width` for å få noe resultat. For å få elementet til å ha lik margin til høyre og venstre side, bruker vi CSS-egenskapen `margin` med verdien `auto`.
+Siden `text-align` bare gjelder for inline-innhold, brukes det en annen metode for å få [blokkelement](https://www.w3.org/TR/CSS2/visuren.html#block-boxes) stående midt på siden. Blokkelement tar vanligvis opp all tilgjengelig plass i bredden, så det må angis `width` for å få noe resultat. For å få elementet til å ha lik margin til høyre og venstre side, bruker vi CSS-egenskapen `margin` med verdien `auto`.
 
 ```
 p {
