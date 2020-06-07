@@ -8,11 +8,14 @@ Jobbet med nettsider hele ungdomstiden, var medeier i et firma, men valgte bygg 
 
 ## Nettlesermarked
 
-IE6 markedsandel? 90 %! Ikke oppdatert siden august 2001.  https://en.wikipedia.org/wiki/Usage_share_of_web_browsers https://en.wikipedia.org/wiki/Internet_Explorer_6
+I starten av 2005 var nettlesermarkedet dominert av [Internet Explorer 6](https://en.wikipedia.org/wiki/Internet_Explorer_6), som hadde over [90 % markedsandel](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers). Mozilla Firefox, Opera og Safari var de største konkurrentene, og Google Chrome hadde ikke sett dagens lys ennå.
+
+Internet Explorer 6 ble lansert høsten 2001, og ble knapt oppdatert i ettertid. Støtten for webstandarder var mangelfull, noe Acid2-testen [klart og tydelig viste](https://en.wikipedia.org/wiki/Acid2). I tillegg fantes det en hel mengde med [frustrerende bugs](http://www.positioniseverything.net/explorer.html), som webutviklere hele tiden måtte prøve å kode seg rundt. margin og float på samme side. padding og width samtidig.
+
+
 
 IE7 ble ikke lansert før oktober 2006 (https://en.wikipedia.org/wiki/Internet_Explorer_7)
 
-IE6: Bugs galore: http://www.positioniseverything.net/explorer.html 
 
 
 ## HTML
