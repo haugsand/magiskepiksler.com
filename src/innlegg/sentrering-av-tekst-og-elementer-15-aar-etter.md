@@ -1,5 +1,5 @@
 ---
-title: Sentrering av tekst og elementer –&nbsp;15 år etter
+title: Sentrering av tekst og elementer, 15 år etter
 date: 2019-02-23
 ---
 
