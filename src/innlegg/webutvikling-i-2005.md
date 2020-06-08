@@ -8,14 +8,11 @@ Jobbet med nettsider hele ungdomstiden, var medeier i et firma, men valgte bygg 
 
 ## Nettlesermarked
 
-I starten av 2005 var nettlesermarkedet dominert av [Internet Explorer 6](https://en.wikipedia.org/wiki/Internet_Explorer_6), som hadde over [90 % markedsandel](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers). Mozilla Firefox, Opera og Safari var de største konkurrentene, og Google Chrome hadde ikke sett dagens lys ennå.
+I starten av 2005 var nettlesermarkedet dominert av [Internet Explorer 6](https://en.wikipedia.org/wiki/Internet_Explorer_6), med over [90 % markedsandel](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers). Mozilla Firefox, Opera og Safari var de største konkurrentene, og Google Chrome hadde ikke sett dagens lys ennå. 
 
-Internet Explorer 6 ble lansert høsten 2001, og ble knapt oppdatert i ettertid. Støtten for webstandarder var mangelfull, noe Acid2-testen [klart og tydelig viste](https://en.wikipedia.org/wiki/Acid2). I tillegg fantes det en hel mengde med [frustrerende bugs](http://www.positioniseverything.net/explorer.html), som webutviklere hele tiden måtte prøve å kode seg rundt. margin og float på samme side. padding og width samtidig.
+Internet Explorer 6 ble lansert høsten 2001. Støtten for webstandarder var mangelfull, noe Acid2-testen [klart og tydelig viste](https://en.wikipedia.org/wiki/Acid2). I tillegg fantes det en hel mengde med [frustrerende bugs](http://www.positioniseverything.net/explorer.html), som webutviklere hele tiden måtte prøve å kode seg rundt. Å sette `margin` og `float` til samme side på et bestemt element, måtte for eksempel unngås. 
 
-
-
-IE7 ble ikke lansert før oktober 2006 (https://en.wikipedia.org/wiki/Internet_Explorer_7)
-
+Det kom ikke en ny versjon av Internet Explorer før høsten 2007. Da hadde versjon 6 vært den dominerende nettleseren i seks år, uten å ha blitt oppdatert i mellomtiden.  
 
 
 ## HTML
@@ -38,6 +35,8 @@ Manglende utviklerverktøy gjorde det vanskelig å jobbe med javascript. Ingen c
 
 Ajax er så vidt i startgropen. (https://thehistoryoftheweb.com/what-does-ajax-even-stand-for/)
 
+Node.js kom i 2009: https://en.wikipedia.org/wiki/Node.js
+
 
 ## Design
 
@@ -49,3 +48,15 @@ Ikke noe som het responsivt design. Mobiltelefonene med internett-tilgang brukte
 
 Begrepet responsivt design kom i 2010. https://ethanmarcotte.com/wrote/responsive-design-at-10/ https://alistapart.com/article/responsive-web-design/
 
+
+## Øvrig verktøystøtte
+
+Stack overflow kom først i 2008 (https://en.wikipedia.org/wiki/Stack_Overflow), men det fantes flere gode community. IRC, forumet til hardware.no, norskwebforum. Ikke like enkelt å søke seg frem til svar på et spørsmål.
+
+Deling av kildekode. Github kom i 2008: https://en.wikipedia.org/wiki/Timeline_of_GitHub
+
+Trello? 
+
+Bugzilla
+
+Basecamp? 
