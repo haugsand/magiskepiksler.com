@@ -10,12 +10,16 @@ Jobbet med nettsider hele ungdomstiden, var medeier i et firma, men valgte bygg 
 
 I starten av 2005 var nettlesermarkedet dominert av [Internet Explorer 6](https://en.wikipedia.org/wiki/Internet_Explorer_6), med over [90 % markedsandel](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers). Mozilla Firefox, Opera og Safari var de største konkurrentene, og Google Chrome hadde ikke sett dagens lys ennå. 
 
-Internet Explorer 6 ble lansert høsten 2001. Støtten for webstandarder var mangelfull, noe Acid2-testen [klart og tydelig viste](https://en.wikipedia.org/wiki/Acid2). I tillegg fantes det en hel mengde med [frustrerende bugs](http://www.positioniseverything.net/explorer.html), som webutviklere hele tiden måtte prøve å kode seg rundt. Å sette `margin` og `float` til samme side på et bestemt element, måtte for eksempel unngås. 
+Internet Explorer 6 ble lansert høsten 2001. Støtten for webstandarder var mangelfull, noe Acid2-testen [klart og tydelig viste](https://en.wikipedia.org/wiki/Acid2). I tillegg fantes det en hel mengde med [frustrerende bugs](http://www.positioniseverything.net/explorer.html), som webutviklere hele tiden måtte prøve å kode seg rundt. 
+
+Den relativt harmløse kodesnutten `float: left; margin-left: 10px;` førte for eksempel til at [IE Double Margin Float Bug](https://cssnewbie.com/double-margin-float-bug/) slo inn. 
 
 Det kom ikke en ny versjon av Internet Explorer før høsten 2007. Da hadde versjon 6 vært den dominerende nettleseren i seks år, uten å ha blitt oppdatert i mellomtiden.  
 
 
 ## HTML
+
+
 
 Den gjeldende versjonen av HTML, 4.01, hadde ikke blitt oppdatert siden 2000. W3C fokuserte på utviklingen av XHTML2, et arbeid de aldri kom i mål med. (https://en.wikipedia.org/wiki/HTML5). WHATWG. 
 
