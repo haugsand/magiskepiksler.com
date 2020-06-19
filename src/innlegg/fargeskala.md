@@ -3,7 +3,7 @@ title: Fargeskala
 date: 2020-05-28
 ---
 
-Innledning
+16,777,216 farger i hex-systemet. https://en.wikipedia.org/wiki/Web_colors
 
 
 ## Komme igang
@@ -52,7 +52,7 @@ Kan gjøre justeringer her og der. Veksle mellom palettte og designverktøy
 
 Gjenta for alle fargene dine.
 
-Basert på metode beskrevet her: Refactoring UI. 
+Basert på metode beskrevet her: Refactoring UI. https://refactoringui.com/previews/building-your-color-palette/
 
 
 ## Endelig resultat
