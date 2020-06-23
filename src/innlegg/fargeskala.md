@@ -3,10 +3,12 @@ title: Fargeskala
 date: 2020-05-28
 ---
 
-16,777,216 farger i hex-systemet. https://en.wikipedia.org/wiki/Web_colors
+Å finne gode farger er krevende. Spesielt for ingeniørhjerner, som gjerne vil ha et logisk resonnement bak valgene som tas. Med den heksidesimale notasjonen kan det angis [16 777 216 ulike farger](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet). Hvorfor er én farge bedre enn en annen, og hvordan kan de kombineres? I denne artikkelen går jeg gjennom hvordan dere kan utarbeide et komplett fargeskjema, med utgangspunkt i én startfarge. 
 
 
 ## Komme igang
+
+
 
 Finn enn farge du liker, som du kan bruke som utgangspunkt.
 
@@ -32,7 +34,7 @@ Ulike type schemes, henvis til nettside.
 
 Her har jeg brukt type xxx.
 
-
+http://www.innoform.no/fargeteori-2
 
 ## Behov for en fargeskala
 
