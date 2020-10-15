@@ -69,3 +69,17 @@ Fargeskala for hver farge
 CSS custom properties.
 
 Enkelt å justere i etterkant.
+
+
+## Fra tidligere eksperimenter
+
+- https://codepen.io/anon/pen/NzZmXm
+- https://codepen.io/anon/pen/qyWrvr
+- https://codepen.io/anon/pen/zLOWwL
+- http://www.hclwizard.org/color-scheme/
+- https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm
+- https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/
+- https://www.vis4.net/labs/colorvis/embed.html?m=hcl&gradients=6
+- https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/
+- https://www.smashingmagazine.com/2016/04/web-developer-guide-color/
+
