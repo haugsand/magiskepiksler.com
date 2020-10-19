@@ -7,8 +7,7 @@
 
     <h1 class="articlelist__header">Siste innlegg</h1>
 
-    <% for (const name of Object.keys(innlegg).reverse()) { const {date, title,
-    body} = innlegg[name]; -%>
+    <% for (const [name, {date, title}] of Object.entries(innlegg).sort((a, b) => b[1].date - a[1].date)) { %>
     <article class="articlelist__article">
         <p class="articlelist__date"><%= date.toISOString().substr(0, 10) %></p>
         <p class="articlelist__title">
@@ -21,3 +20,5 @@
 </section>
 
 <%- include('_footer.ejs') -%>
+
+
