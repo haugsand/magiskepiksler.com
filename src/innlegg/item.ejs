@@ -1,28 +1,14 @@
 <%- include('../_header.ejs') -%>
 
-<header class="header">
 
-    <div class="header__left">
-        <a href="/" class="header__link">
-            &larr; Alle innlegg</a>
-    </div>
-
-
-    <div class="header__center">
-        <h1 aria-label="Magiske piksler" class="compact">
-            <%- include('../_logo.ejs') -%>
-        </h1>
-    </div>
-
-    <div class="header__right">
-
-</header>
 
 <h1><%= title %></h1>
 
-<p>Publisert <%= date.toISOString().substr(0, 10) %>.</p>
+<p class="article__date"><%= date.toISOString().substr(0, 10) %></p>
 
-<%- body %> <%- include('../_footer.ejs') -%>
+<%- body %> 
+
+<%- include('../_footer.ejs') -%>
 
 <script type="text/javascript">
     document.title = "<%= title %>";
