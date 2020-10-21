@@ -1,5 +1,5 @@
 ---
-title: Vertikal rytme og luft
+title: Vertikal rytme og luft (DRAFT)
 date: 2020-06-01
 ---
 

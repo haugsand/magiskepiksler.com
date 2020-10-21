@@ -1,5 +1,5 @@
 ---
-title: Fargeskala
+title: Fargeskala (DRAFT)
 date: 2020-05-28
 ---
 

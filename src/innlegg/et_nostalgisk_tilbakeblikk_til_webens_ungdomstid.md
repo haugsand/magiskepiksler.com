@@ -1,5 +1,5 @@
 ---
-title: Et nostalgisk tilbakeblikk til webens ungdomstid
+title: Et nostalgisk tilbakeblikk til webens ungdomstid (DRAFT)
 date: 2019-07-20
 ---
 

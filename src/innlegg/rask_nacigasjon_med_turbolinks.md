@@ -1,5 +1,5 @@
 ---
-title: Rask navigasjon med Turbolinks
+title: Rask navigasjon med Turbolinks (DRAFT)
 date: 2020-12-12
 ---
 

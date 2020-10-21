@@ -1,5 +1,5 @@
 ---
-title: CSS-moduler og kodeklarhet
+title: CSS-moduler og kodeklarhet (DRAFT)
 date: 2019-07-27
 ---
 Manglende local scope i CSS blir ofte sett på som problematisk. Alle CSS-regler du skriver kan potensielt berøre flere DOM-elementer enn det du tenkte i utgangspunktet. Og motsatt, du har ikke kontroll på hvilken eksisterende CSS som påvirker DOM-elementet du jobber med.

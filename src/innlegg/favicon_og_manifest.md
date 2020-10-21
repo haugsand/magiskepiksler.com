@@ -1,5 +1,5 @@
 ---
-title: Favicon og manifest
+title: Favicon og manifest (DRAFT)
 date: 2020-12-12
 ---
 

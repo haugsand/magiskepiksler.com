@@ -1,5 +1,5 @@
 ---
-title: Animerte piksler
+title: Animerte piksler (DRAFT)
 date: 2020-12-12
 ---
 
