@@ -1,5 +1,5 @@
 ---
-title: Webutvikling i 2005
+title: Da weben var i limbo
 date: 2019-07-24
 ---
 
