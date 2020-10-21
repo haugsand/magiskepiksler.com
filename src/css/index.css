@@ -128,7 +128,9 @@ li::before {
 
 a {
   color: var(--purple-500);
-  transition: color 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+  border-bottom: thin solid currentColor;
 }
 
 a:hover {
@@ -146,16 +148,24 @@ code {
 
 pre {
   background-color: var(--brown-50);
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--space-double);
   font-size: var(--fontsize-small);
   padding: 0.5rem 1rem;
   overflow-x: auto;
+  border-top: thin solid var(--brown-100);
+  border-right: thin solid var(--brown-100);
+  border-bottom: thin solid var(--brown-300);
+  border-left: thin solid var(--brown-100);
 }
 
 pre code {
   background: none;
   font-size: inherit;
   padding: 0;
+}
+
+pre + pre {
+  margin-top: calc(var(--space-normal) * -1);
 }
 
 .header {
@@ -168,6 +178,10 @@ pre code {
   display: flex;
   align-items: center;
   height: var(--space-normal);
+}
+
+.header__logolink {
+  border-bottom: none;
 }
 
 .header__navigation {
@@ -191,9 +205,6 @@ pre code {
   margin-right: 0;
 }
 
-
-
-
 li::before {
   content: "";
   width: 0.5rem;
@@ -204,7 +215,6 @@ li::before {
   left: 1rem;
   top: 0.75rem;
 }
-
 
 .header__link {
   text-decoration: none;
