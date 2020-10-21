@@ -247,11 +247,15 @@ li::before {
 
 .mp__magiske-piksler {
   --ratio: 4px;
-  --color: #000;
+  --color: var(--grey-900);
   margin: 0 auto;
   position: relative;
   width: calc(var(--ratio) * 52);
   height: calc(var(--ratio) * 7);
+}
+
+.mp__magiske-piksler:hover {
+  --color: var(--purple-600);
 }
 
 .mp__magiske {
@@ -276,7 +280,7 @@ li::before {
   height: var(--ratio);
   background-color: var(--color);
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: all 0.4s;
 }
 
 @media (max-width: 48em) {
