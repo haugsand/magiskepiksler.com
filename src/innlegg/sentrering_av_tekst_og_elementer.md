@@ -43,14 +43,14 @@ p {
 }
 ```
 
-Når det er oppgitt 2 verdier etter `margin`, gjelder den første verdien for de _begge_ vertikale sidene, og den andre verdien for de _begge_ horisontale.
-
 ```
 <p>
   Denne teksten står inne i en boks som står midt på siden.<br>
   Og er venstrejustert inne i boksen!
 </p>
 ```
+
+Når det er oppgitt 2 verdier etter `margin`, gjelder den første verdien for de _begge_ vertikale sidene, og den andre verdien for de _begge_ horisontale.
 
 Denne metoden kan brukes til å sentrere et bilde også, ved å angi at bildet skal oppføre seg som et blokkelement ved hjelp av CSS-egenskapen `display`.
 
