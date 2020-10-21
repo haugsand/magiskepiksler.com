@@ -1,0 +1,24 @@
+<%- include('../_header.ejs') -%>
+
+
+
+
+<section class="articlelist">
+
+    <h1 class="articlelist__header">Ellers</h1>
+
+    <% for (const [name, {date, title}] of Object.entries(root.ellers).sort((a, b) => b[1].date - a[1].date)) { %>
+    <article class="articlelist__article">
+        <p class="articlelist__date"><%= date.toISOString().substr(0, 10) %></p>
+        <p class="articlelist__title">
+            <a href="ellers/<%= name %>.html" class="articlelist__link">
+                <%= title %>
+            </a>
+        </p>
+    </article>
+    <% } -%>
+</section>
+
+<%- include('../_footer.ejs') -%>
+
+
