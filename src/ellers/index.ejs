@@ -7,6 +7,8 @@
 
     <h1 class="articlelist__header">Ellers</h1>
 
+    <p class="articlelist__description">En kuratert liste med interessant innhold funnet på verdensveven.</p>
+
     <% for (const [name, {date, title}] of Object.entries(root.ellers).sort((a, b) => b[1].date - a[1].date)) { %>
     <article class="articlelist__article">
         <p class="articlelist__date"><%= date.toISOString().substr(0, 10) %></p>
