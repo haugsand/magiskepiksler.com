@@ -128,7 +128,7 @@ li::before {
 
 a {
   color: var(--purple-500);
-  transition: all 0.3s;
+  transition: border 0.3s, color 0.3s;
   text-decoration: none;
   border-bottom: thin solid currentColor;
 }
@@ -166,6 +166,20 @@ pre code {
 
 pre + pre {
   margin-top: calc(var(--space-normal) * -1);
+}
+
+blockquote {
+  padding-left: 3rem;
+  position: relative;
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0.8rem;
+  color: var(--red-500);
+  font-size: var(--fontsize-title);
+  top: 0.5rem;
 }
 
 .header {
