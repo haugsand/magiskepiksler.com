@@ -171,6 +171,7 @@ pre + pre {
 blockquote {
   padding-left: 3rem;
   position: relative;
+  margin-bottom: var(--space-double);
 }
 
 blockquote::before {
@@ -242,7 +243,12 @@ li::before {
 .articlelist__header {
   font-size: var(--fontsize-header);
   line-height: var(--space-normal);
+  margin-bottom: var(--space-normal);
+}
+
+.articlelist__description {
   margin-bottom: var(--space-inbetween);
+  text-align: center;
 }
 
 .articlelist__article {

@@ -14,7 +14,7 @@ Jeg vil gjerne jobbe med flere ideer til fremtidige innlegg samtidig, uten at de
 
 
 - En master-branch med produksjonsklart innhold som publiseres til magiskepiksler.com.
-- En dev-branch med ideer og utkast som er tilgjengelig på dev.magiskepiksler.com.
+- En dev-branch med ideer og utkast som er tilgjengelig på et subdomene.
 
 Endringer i design og tidligere publiserte innlegg gjøres direkte på master-branchen.
 
