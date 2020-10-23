@@ -3,7 +3,7 @@ title: Why Highly Efficient Leaders Fail
 date: 2019-02-12
 ---
 
-Kilde: [https://hbr.org/2019/02/why-highly-efficient-leaders-fail](https://hbr.org/2019/02/why-highly-efficient-leaders-fail)
+> [https://hbr.org/2019/02/why-highly-efficient-leaders-fail](https://hbr.org/2019/02/why-highly-efficient-leaders-fail)
 
 ## Take-aways
 
