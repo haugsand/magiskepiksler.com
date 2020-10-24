@@ -1,0 +1,51 @@
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap"
+    />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="<%= rootPath %>/css/index.css" />
+  </head>
+
+  <body>
+    <div class="top"></div>
+
+    <div>
+
+      <header class="header">
+        <div class="header__logo">
+          <a href="/" aria-label="Magiske piksler" class="header__logolink">
+          <%- include('_logo.ejs') -%>
+          </a>
+        </div>
+
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__listitem">
+              <a href="/" class="header__link">Innlegg</a>
+            </li>         
+             <li class="header__listitem">
+              <a href="/ellers" class="header__link">Ellers</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>

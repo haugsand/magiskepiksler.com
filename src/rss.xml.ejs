@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+
+<title>Magiske piksler</title>
+<link><%= data.link %></link>
+<description>Magiske piksler feed</description>
+<atom:link href="<%= data.link %>/rss.xml" rel="self" type="application/rss+xml" />
+
+<% 
+
+    let content = []; 
+
+    Object.keys(innlegg).forEach(key => {
+        innlegg[key].type = 'innlegg';
+        innlegg[key].name = key;
+        content.push(innlegg[key]);
+    })
+
+    Object.keys(ellers).forEach(key => {
+        ellers[key].type = 'ellers';
+        ellers[key].name = key;
+        content.push(ellers[key]);
+    })
+
+%>
+
+<% content.sort((a, b) => b.date - a.date).forEach(item =>  { %>
+<item>
+     <title><%= item.title %></title>
+     <link><%= data.link %>/<%= item.type %>/<%= item.name %>.html</link>
+     <guid><%= data.link %>/<%= item.type %>/<%= item.name %>.html</guid>
+     <description><![CDATA[<%- item.body.trim() %>]]></description>
+</item>
+<% }) -%>
+
+</channel>
+</rss>

@@ -35,14 +35,16 @@ Eventuelle endringer i design eller innhold hentes fra master-branchen, og merge
 
 Jeg oppretter et nytt innlegg, og starter å skrive.
 
-    touch src/innlegg/arbeidsflyt-med-git.md
+    touch src/innlegg/arbeidsflyt_med_git.md
 
 
-Jeg commiter og pusher til Github underveis.
+Om jeg ikke fullfører innlegget på en gang, commiter jeg endringene, og pusher til Github.
 
     git commit -am "Arbeidsflyt med Git, førsteutkast"
     git push
 
+
+På dev-branchen redigerer jeg utelukkende filer som ikke finnes på master-branchen. Da slipper jeg konflikter ved merging.
 
 
 ## Publisere nytt innlegg
@@ -54,7 +56,7 @@ Når et innlegg er klar for publisering, bytter jeg til master-branchen.
 
 Jeg velger deretter hvilken fil som skal publiseres, [ved å hente en spesifikk fil fra dev-branchen](https://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/).
 
-    git checkout dev src/innlegg/arbeidsflyt-med-git.md
+    git checkout dev src/innlegg/arbeidsflyt_med_git.md
 
 
 Jeg commiter og pusher, og etter noen få minutter er innlegget tilgjengelig på magiskepiksler.com
