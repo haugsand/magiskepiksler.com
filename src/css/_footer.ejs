@@ -22,24 +22,25 @@
 }
 
 .footer__link {
-  color: var(--grey-600);
+  color: var(--grey-800);
   border-bottom: 0;
       display: flex;
     align-items: center;
 }
 
-.footer__link svg {
+.footer__link img {
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 0.5rem;
-    fill: var(--grey-300);
-    transition: fill 0.3s;
+    filter: opacity(40%);
+    transition: filter 0.3s;
 }
 
 .footer__link:hover {
-  color: var(--grey-600);
+  color: var(--grey-800);
 }
 
-.footer__link:hover .twitter-icon { fill: #1DA1F2; }
-.footer__link:hover .github-icon { fill: #24292e; }
-.footer__link:hover .rss-icon { fill: #f26522; }
+.footer__link:hover img {
+  filter: none;  
+}
+
