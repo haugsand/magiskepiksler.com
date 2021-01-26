@@ -50,6 +50,7 @@ html {
   --fontsize-normal: 1.25rem;
   --fontsize-header: 1.75rem;
   --fontsize-title: 2.75rem;
+  --space-small: 1rem;
   --space-normal: 2rem;
   --space-inbetween: 3rem;
   --space-double: 4rem;
@@ -91,11 +92,11 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(192, 80, 82, 0.5);
-  background-image: url('/svg/top-2.svg'),
-    url('/svg/top-3.svg'),
-    url('/svg/top-5.svg'),
-    url('/svg/top-7.svg'),
-    url('/svg/top-11.svg');
+  background-image: url('/gfx/top-2.svg'),
+    url('/gfx/top-3.svg'),
+    url('/gfx/top-5.svg'),
+    url('/gfx/top-7.svg'),
+    url('/gfx/top-11.svg');
 }
 
 main {
@@ -119,6 +120,13 @@ h2 {
   margin-bottom: var(--space-normal);
 }
 
+h3 {
+  font-size: var(--fontsize-normal);
+  font-weight: 500;
+  margin-top: var(--space-double);
+  margin-bottom: var(--space-normal);
+}
+
 p {
   margin-bottom: var(--space-normal);
 }
@@ -130,7 +138,7 @@ ul {
 
 li {
   padding-left: 3rem;
-  margin-bottom: var(--space-normal);
+  margin-bottom: var(--space-small);
   position: relative;
 }
 
@@ -147,51 +155,64 @@ li::before {
 
 a {
   color: var(--purple-500);
-  transition: border-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
-  border-bottom: thin solid currentColor;
+  font-weight: 400;
 }
 
 a:hover {
   color: var(--red-500);
-  border-color: transparent;
+  outline: var(--red-50) solid thin;
+  background-color: var(--red-50);
+}
+
+a:focus {
+  background-color: var(--purple-100);
+  outline: var(--purple-100) solid thin;
+  outline-offset: 0;
 }
 
 code {
-  background-color: var(--brown-50);
-  color: var(--brown-900);
-  font-weight: 300;
+  color: var(--brown-700);
+  font-weight: 400;
   font-family: "IBM Plex Mono", monospace;
   font-size: var(--fontsize-small);
   padding: 0.25rem;
+  background-color: var(--brown-50);
 }
 
+
+a code, h1 code, h2 code, h3 code, h4 code {
+  background: none;
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+
 pre {
-  background-color: var(--brown-50);
-  margin-bottom: var(--space-double);
+  background-color: var(--grey-700);
+  margin-bottom: var(--space-normal);
   font-size: var(--fontsize-small);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   overflow-x: auto;
-  border-top: thin solid var(--brown-100);
-  border-right: thin solid var(--brown-100);
-  border-bottom: thin solid var(--brown-300);
-  border-left: thin solid var(--brown-100);
+  border-radius: 0.25rem;
 }
 
 pre code {
   background: none;
   font-size: inherit;
   padding: 0;
+  color: var(--grey-50);
 }
 
-pre + pre {
-  margin-top: calc(var(--space-normal) * -1);
-}
 
 blockquote {
   padding-left: 3rem;
   position: relative;
-  margin-bottom: var(--space-double);
+  margin-bottom: var(--space-normal);
 }
 
 blockquote::before {
@@ -203,7 +224,33 @@ blockquote::before {
   top: 0.5rem;
 }
 
+img {
+  max-width: 100%; 
+  height: auto;
+}
 
+figure {
+  margin: var(--space-double) 0;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: var(--fontsize-small);
+  margin-top: var(--space-normal);
+  text-align: center;
+  color: var(--grey-600);
+}
+
+hr {
+  background: url(/gfx/hr.svg) no-repeat 50% 50%;
+  border: 0;
+  height: var(--space-normal);
+  margin: var(--space-large) 0;
+}
 
 
 
