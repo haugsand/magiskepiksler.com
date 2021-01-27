@@ -30,7 +30,7 @@ Jeg starter med å bytte til dev-branchen.
 
 Eventuelle endringer i design eller innhold hentes fra master-branchen, og merges inn.
 
-    git merge master
+    git merge master -m "master -> dev"
 
 
 Jeg oppretter et nytt innlegg, og starter å skrive.

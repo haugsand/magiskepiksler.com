@@ -3,11 +3,11 @@ title: En praktisk guide til mer tilgjengelige nettsider
 date: 2021-01-26
 ---
 
-Universell utforming er viktig og gir store gevinster, noe som er godt beskrevet hos [Tilsynet for universell utforming og IKT](https://www.uutilsynet.no/veiledning/kvifor-universell-utforming-av-ikt/240).
+Universell utforming er viktig og gir store gevinster. Dette er godt beskrevet hos [Tilsynet for universell utforming og IKT](https://www.uutilsynet.no/veiledning/kvifor-universell-utforming-av-ikt/240), så denne artikkelen fokuserer heller på å være en praktisk guide til hvordan dette kan oppnås.
 
-Dette er en praktisk guide til hvordan du kan gjøre et nettsted mer tilgjengelig, med fokus på hvordan den underliggende HTML- og CSS-koden bør utformes. Guiden forklarer viktigheten av å skrive tilgjengelig kode, og inneholder eksempler på både dårlig og god kodepraksis.
+Informasjonsnettsteder og enkle webapplikasjoner er i utgangspunktet tilgjengelige for alle, så lenge du skriver semantisk HTML. Det er riktignok mye som kan gå galt, men samtidig kan mange alvorlige feil avdekkes ved å utføre en enkel kondeinspeksjon i nettleseren. 
 
-Guiden består av fire nybegynnervennlige tema: 
+Artikkelen inneholder eksempler på feil som er lett å oppdage og lett å rette opp, og er gruppert i følgende tema:
 
 * [Tekststørrelse](#tekststørrelse)
 * [Alternativ tekst for bilder](#alternativ-tekst-for-bilder)
@@ -47,9 +47,13 @@ Siden en absolutt enhet er relatert til en fysisk størrelse, vil den ikke skale
 
 Bruk derfor relative enheter ved angivelse av `font-size`. Både `em`, `rem` og `%` er trygge valg.
 
-Andre dimensjoner, som `width` og `margin`, er ofte proporsjonale i forhold til tekststørrelsen. Et avsnitt bør ha en maksbredde som begrenser antall ord på hver linje, for å forhindre at teksten blir vanskelig å lese. Den vertikale avstanden mellom to avsnitt er gjerne den samme som avsnittenes linjehøyde. 
+Andre dimensjoner er ofte proporsjonale til tekststørrelsen, og bør derfor angis med en enheten som er relatert til tekststørrelsen. Noen eksempler
 
-De aller fleste størrelser bør derfor settes med relative enheter, inkludert [media queries](https://zellwk.com/blog/media-query-units/).
+- Et avsnitt bør ha en maksbredde (`max-width`) som begrenser antall ord på hver linje, for å forhindre at teksten blir vanskelig å lese. 
+- Et avsnitt er lettest å lese når den samtidig har en linjehøyde (`line-height`) som harmonerer med tekststørrelsen.
+- Den vertikale avstanden (`margin`)  mellom to avsnitt er gjerne den samme som avsnittenes linjehøyde, for å bidra til at designet får en [vertikal rytme](https://zellwk.com/blog/why-vertical-rhythms/). 
+
+Bruk relative enheter til de aller fleste dimensjoner, inkludert [media queries](https://zellwk.com/blog/media-query-units/).
 
 
 ### Dårlig praksis: `font-size` angis med en absolutt enhet
@@ -90,7 +94,6 @@ p {
 }
 ```
 
-Et eksempel til etterfølgelse.
 
 
 ### God praksis: Relative enheter brukes til både `font-size` og andre dimensjoner
@@ -176,11 +179,11 @@ Brukere av skjermlesere vil ikke være istand til å oppfatte innholdet dette bi
 <img src="w3c-logo.png" alt="W3C logo">
 ```
 
-Dersom det er en logo med teksten &laquo;W3C&raquo;, er de tilstrekkelig å ha &laquo;W3C&raquo; som alternativ tekst. Det er ikke nødvendig å presisere at det er en logo.
+Dersom det er en logo med teksten &laquo;W3C&raquo;, er det tilstrekkelig å ha &laquo;W3C&raquo; som alternativ tekst. Det er ikke nødvendig å presisere at det er en logo.
 
 
 
-### Dårlig praksis: Et dekorativt bilde har overføldig alternativ tekst
+### Dårlig praksis: Et dekorativt bilde har overflødig alternativ tekst
 
 
 ```
@@ -245,9 +248,10 @@ En knapp har et standardutseende som er avhengig av hvilken nettleser som benytt
 
 En `<div>` med `onclick`-event er imidlertid ikke en fullgod erstatning for `<button>`, på grunn av følgende:
 
-- En `<button>` har en implisitt semantikk som forteller at det er en knapp.
 - En `<button>` kan nås når brukeren navigerer på et nettsted ved å bruke tastaturet.
-- En `<button>` markeres med en egen stil når elementet har fokus, og kan aktiveres ved å trykke på &laquo;space&raquo;-tasten.
+- En `<button>` kan aktiveres ved å trykke på &laquo;space&raquo;-tasten.
+- En `<button>` markeres med en egen stil når elementet har fokus
+- En `<button>` har en implisitt semantikk som forteller at det er en knapp.
 
 Alle de tre egenskapene ovenfor må være på plass for at nettsiden skal være tilgjengelig. Dersom det benyttes andre HTML-elementer enn `<button>`, må denne oppførselen derfor gjenskapes med supplerende kode.
 
@@ -256,13 +260,13 @@ Se også til at knapper og lenker inneholder korte og presise tekster, så det e
 
 
 
-### Dårlig praksis: Knapper består av andre elementer enn `<button>`
+### Dårlig praksis: Knapp består av andre elementer enn `<button>`
 
 ```
 <div onClick="() => slettBruker();">Slett bruker</div>
 ```
 
-I dette tilfellet er `<div>` benyttet i stedet for `<button>`, og elementet har derfor ingen semantisk, det er ikke tilgjengelig via tastaturet, og det mangler en fokusstil.
+I dette tilfellet er `<div>` benyttet i stedet for `<button>`, og elementet har derfor ingen semantikk, det er ikke tilgjengelig via tastaturet, og det mangler en fokusstil.
 
 Vær oppmerksom på at `onclick` og andre eventer som regel angis i separate javascript-filer, og er derfor ikke like enkle å avdekke via en kodeinspeksjon.
 
@@ -271,13 +275,27 @@ Vær oppmerksom på at `onclick` og andre eventer som regel angis i separate jav
 ### Dårlig praksis: Lenke med lite beskrivende innhold
 
 ```
-Klikk <a href="https://www.w3.org/">her</a> for å lære mer om HTML. 
+Klikk <a href="https://www.w3.org/">her</a> for å lære mer om HTML
 
 ```
 
-Teksten &laquo;her&raquo; er lite beskrivende for hvor lenken ender. &laquo;Besøk W3C&raquo; ville ha vært en bedre tekst.
+Teksten &laquo;her&raquo; er lite beskrivende for hvor lenken ender.
 
 
+
+### God praksis: Knapp er implementert med `<button>`
+
+```
+<button type="button">Slett bruker</button>
+```
+
+
+
+### God praksis: Lenke med en god lenketekst
+
+```
+<a href="https://www.w3.org/">Besøk W3C</a> for å lære mer om HTML
+```
 
 
 ***
@@ -295,8 +313,21 @@ Det er ikke tilstrekkelig at teksten er visuelt i nærheten av kontrollen. Tekst
 
 <figure>
 
-<img src="/img/etternavn-label-input.svg" alt="En tekstlig label står rett ovenfor et input-felt " width="304" height="208">
-<figcaption>En label bør plasseres i umiddelbar nærhet av kontrollen den er relatert til.</figcaption>
+<img src="/img/etternavn-label-input.svg" alt="En tekstlie labelen Etternavn står rett ovenfor et input-felt " width="256" height="64">
+<figcaption>Eksempel på en label ved siden av input-felt.</figcaption>
+
+</figure>
+
+
+Et `<label>`-element kan enten plasseres rundt en kontroll, eller referere til en kontrolls `id` ved å bruke `for`-attributtet. De to metodene er likeverdige.
+
+Attributtet `placeholder` angir om det skal vises en tekst inne i en kontroll mens kontrollen ikke har noen verdi. Dette er ikke et alternativ til å bruke `<label>`. `placeholder`-attributtet kan faktisk by på så store utfordringer for brukere at det [alltid bør unngås](https://www.nngroup.com/articles/form-design-placeholders/).
+
+
+<figure>
+
+<img src="/img/etternavn-placeholder-input.svg" alt="Et input-felt har Etternavn som placeholder" width="256" height="32">
+<figcaption>Eksempel på et input-felt med en placeholder. Når du begynner å skrive noe, forsvinner den.</figcaption>
 
 </figure>
 
@@ -322,7 +353,7 @@ Det er ikke tilstrekkelig at teksten er visuelt i nærheten av kontrollen. Tekst
 </p>
 ```
 
-&laquo;Etternavn&raquo; er angitt ved hjelp av placeholder-attributtet, og teksten vises derfor som en nedtonet tekst inne i input-feltet. Dette er ikke et alternativ til å bruke label, og [placeholder bør alltid unngås](https://www.nngroup.com/articles/form-design-placeholders/).
+&laquo;Etternavn&raquo; er angitt ved hjelp av placeholder-attributtet, noe som ikke veier opp for at `<label>` mangler.
 
 
 ### God praksis: `<label>` plasseres rundt `<input>` og tekst
@@ -336,7 +367,7 @@ Det er ikke tilstrekkelig at teksten er visuelt i nærheten av kontrollen. Tekst
 </p>
 ```
 
-`<label>`-elementet kan plasseres rundt &laquo;Etternavn&raquo; og `<input>` for å assosiere dem til hverandre. 
+`<label>`-elementet plasseres rundt &laquo;Etternavn&raquo; og `<input>` for å assosiere dem til hverandre. 
 
 
 ### God praksis: `<label>` refererer til et `<input`-element 
@@ -348,7 +379,7 @@ Det er ikke tilstrekkelig at teksten er visuelt i nærheten av kontrollen. Tekst
 </p>
 ```
 
-Innholdet i `<label>` kan også assosieres til input-feltet ved å bruke `for`-attributtet.
+Innholdet i `<label>` assosieres til input-feltet ved å bruke `for`-attributtet.
 
 
 
@@ -366,3 +397,4 @@ Innholdet i `<label>` kan også assosieres til input-feltet ved å bruke `for`-a
 - Bruk lenker `<a>` for å navigere til en ny URL, og knapper `<button>` til alt annet.
 - Bruk `<label>`-elementer for å beskrive hver kontroll (`<input>`, `<select>`, `<textarea>`) i et skjema.
 
+[&uarr; Hopp til starten av artikkelen](#top)
