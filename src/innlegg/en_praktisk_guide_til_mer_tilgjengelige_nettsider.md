@@ -234,7 +234,7 @@ Retningslinjene ovenfor leder derimot til en ny problemstilling: Når er det øn
 - Gir det mening å bokmerke den nye visningen?
 - Gir det mening å bruke tilbake-knappen i nettleseren for å navigere til forrige visning?
 
-Om du svarer &laquo;ja&raquo; på ett eller flere av spørsmålene, er det en sterk indikasjon på at du bør bruke en lenke.
+Hvis du svarer &laquo;ja&raquo; på ett eller flere av spørsmålene, er det en sterk indikasjon på at du bør bruke en lenke.
 
 <figure>
 
@@ -255,7 +255,7 @@ En `<div>` med `onclick`-event er imidlertid ikke en fullgod erstatning for `<bu
 
 Alle de tre egenskapene ovenfor må være på plass for at nettsiden skal være tilgjengelig. Dersom det benyttes andre HTML-elementer enn `<button>`, må denne oppførselen derfor gjenskapes med supplerende kode.
 
-Se også til at knapper og lenker inneholder korte og presise tekster, så det er tydelig for brukeren hva en knapp gjør, og hvor en lenke leder.
+Sørg også for at knapper og lenker inneholder korte og presise tekster, så det er tydelig for brukeren hva en knapp gjør, og hvor en lenke leder.
 
 
 
