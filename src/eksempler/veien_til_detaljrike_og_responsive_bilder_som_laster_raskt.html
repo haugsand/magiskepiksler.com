@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Veien til detaljrike og responsive bilder som laster raskt - Eksempler</title>
+
+    <style type="text/css">
+
+      p {
+        max-width: 48em;
+      }
+
+      hr {
+        margin: 3em 0;
+      }
+
+      #eksempel-3 img,
+      #eksempel-4 img,
+      #eksempel-5 img,
+      #eksempel-6 img,
+      #eksempel-7 img {
+        max-width: 100%; 
+        height: auto;
+        aspect-ratio: 3 / 2; 
+      }
+
+    </style>
+
+  <body>
+
+    <h1>Veien til detaljrike og responsive bilder som laster raskt - Eksempler</h1>
+
+    <p>
+      Dette er et dokument med supplerende eksempler til artikkelen <a href="/innlegg/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html">Veien til detaljrike og responsive bilder som laster raskt</a>.
+    </p>
+    
+
+    <hr>
+
+    <section id="eksempel-1">
+      <h2>Eksempel 1</h2>
+
+      <p>Dette bildet mangler attributtene width og height. Legg merke til at layouten hopper når bildet lastes. Åpne utviklerinnstillingene til nettleseren, og aktiver simulering av en lav nettverkshastighet for å se effekten bedre.</p>
+
+      <img src="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.jpg" alt="">
+
+    </section>
+
+    <hr>
+
+    <section id="eksempel-2">
+      <h2>Eksempel 2</h2>
+
+      <p>I motsetning til eksempel 1, har dette bildet både width og height satt. Layouten vil derfor ikke hoppe.</p>
+
+      <img src="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.jpg" width="1080" height="720" alt="">
+
+    </section>
+
+    <hr>
+
+    <section id="eksempel-3">
+      <h2>Eksempel 3</h2>
+
+      <p>Juster nettleserbredden, og legg merke til at dette bildet er responsivt.</p>
+
+      <img src="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.jpg" width="1080" height="720" alt="">
+
+    </section>
+
+    <hr>
+
+    <section id="eksempel-4">
+      <h2>Eksempel 4</h2>
+
+      <p>Om du har en høyoppløselig skjerm, vil du legge merke til at dette bildet er skarpere sammenlignet med bildene i de forrige eksemplene.</p>
+
+      <img src="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.jpg" srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_2160.jpg 2x" width="1080" height="720" alt="">
+
+    </section>
+
+    <hr>
+
+    <section id="eksempel-5">
+      <h2>Eksempel 5</h2>
+
+      <p>Når du reduserer justerer nettleserbredden til å bli mindre enn en bestemt verdi, vil det vises et alternativt bilde.</p>
+
+      <picture>
+        <source srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_small_540.jpg, /img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_small_1080.jpg 2x" media="(max-width: 540px)">
+        <img src="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.jpg" srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_2160.jpg 2x" width="1080" height="720" alt="">
+      </picture>
+
+    </section>
+
+    <hr>
+
+    <section id="eksempel-6">
+      <h2>Eksempel 6</h2>
+
+      <p>I dette eksempelet tilbys bildet på AVIF-formatet i tillegg til JPEG, i tillegg til lazy loading. </p>
+
+
+        <p>Åpne nettleserens utviklerinnstillinger, og gå til nettverksfanen. Gå til toppen av denne siden, og last siden på nytt. Scroll så sakte nedover. Da vil du legge merke til at at dette bildet først lastes like før du får øye på det.</p>
+
+      <picture>
+        <source srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_small_540.avif, /img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_small_1080.avif 2x" type="image/avif" media="(max-width: 540px)">
+        <source srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.avif, /img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_2160.avif 2x" type="image/avif">
+        <source srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_small_540.jpg, /img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_small_1080.jpg 2x" media="(max-width: 540px)">
+        <img src="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_1080.jpg" srcset="/img/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt/horse_2160.jpg 2x" width="1080" height="720" loading="lazy" alt="">
+      </picture>
+
+
+    </section>
+
+
+  </body>
+
+</html>
+

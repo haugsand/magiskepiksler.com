@@ -1,0 +1,31 @@
+.articlelist {
+}
+
+.articlelist__header {
+  font-size: var(--fontsize-header);
+  line-height: var(--lineheight-header);
+  margin-bottom: var(--space-m);
+}
+
+.articlelist__description {
+  margin-bottom: var(--space-l);
+  text-align: center;
+}
+
+.articlelist__article {
+  text-align: center;
+  margin-bottom: var(--space-l);
+}
+
+.articlelist__date {
+  font-size: var(--fontsize-small);
+  margin-bottom: 0;
+}
+
+.articlelist__title {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.articlelist__link {
+}

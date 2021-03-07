@@ -1,0 +1,37 @@
+.mp__magiske-piksler {
+  font-size: 4px;
+  --color: var(--grey-900);
+  margin: 0 auto;
+  position: relative;
+  width: 52em;
+  height: 7em;
+}
+
+.mp__magiske-piksler:hover {
+  --color: var(--red-600);
+}
+
+.mp__magiske {
+  position: absolute;
+  width: 27em;
+  height: 7em;
+  top: 0;
+  left: 0;
+}
+
+.mp__piksler {
+  position: absolute;
+  width: 22em;
+  height: 7em;
+  top: 0;
+  left: 30em;
+}
+
+.mp__magiske-piksler span {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  opacity: 0;
+  transition: all 0.4s;
+}
