@@ -5,7 +5,7 @@ date: 2021-01-26
 
 Universell utforming er viktig og gir store gevinster. Dette er godt beskrevet hos [Tilsynet for universell utforming og IKT](https://www.uutilsynet.no/veiledning/kvifor-universell-utforming-av-ikt/240), så denne artikkelen fokuserer heller på å være en praktisk guide til hvordan dette kan oppnås.
 
-Informasjonsnettsteder og enkle webapplikasjoner er i utgangspunktet tilgjengelige for alle, så lenge du skriver semantisk HTML. Det er riktignok mye som kan gå galt, men samtidig kan mange alvorlige feil avdekkes ved å utføre en enkel kondeinspeksjon i nettleseren. 
+Informasjonsnettsteder og enkle webapplikasjoner er i utgangspunktet tilgjengelige for alle, så lenge du skriver semantisk HTML. Det er riktignok mye som kan gå galt, men samtidig kan mange alvorlige feil avdekkes ved å utføre en enkel kodeinspeksjon i nettleseren. 
 
 Artikkelen inneholder eksempler på feil som er lett å oppdage og lett å rette opp, og er gruppert i følgende tema:
 
@@ -125,7 +125,7 @@ Her er alle dimensjoner angitt med relative enheter, noe som gjør at hele desig
 
 For å sette ting på spissen, så kan bilder på nettsider deles inn i to kategorier:
 
-- Bilder som er dekorative, og gjør et nettsted mer visuelt attraktivt. Dette gjelder blant annet ikoner som supplererer en tekst, bakgrunnsmønster og kantlinjer. 
+- Bilder som er dekorative, og gjør et nettsted mer visuelt attraktivt. Dette gjelder blant annet ikoner som supplerer en tekst, bakgrunnsmønster og kantlinjer. 
 - Bilder som bærer informasjon eller har en funksjon, og er en viktig del av nettsidens innhold. Dette gjelder blant annet figurer, logoer og annen grafikk med tekst. 
 
 Her omtales kun bilder som legges inn ved hjelp av [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)-elementet, og ikke [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) eller [bakgrunnsbilder](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
@@ -234,7 +234,7 @@ Retningslinjene ovenfor leder derimot til en ny problemstilling: Når er det øn
 - Gir det mening å bokmerke den nye visningen?
 - Gir det mening å bruke tilbake-knappen i nettleseren for å navigere til forrige visning?
 
-Om du svarer &laquo;ja&raquo; på ett eller flere av spørsmålene, er det en sterk indikasjon på at du bør bruke en lenke.
+Hvis du svarer &laquo;ja&raquo; på ett eller flere av spørsmålene, er det en sterk indikasjon på at du bør bruke en lenke.
 
 <figure>
 
@@ -255,7 +255,7 @@ En `<div>` med `onclick`-event er imidlertid ikke en fullgod erstatning for `<bu
 
 Alle de tre egenskapene ovenfor må være på plass for at nettsiden skal være tilgjengelig. Dersom det benyttes andre HTML-elementer enn `<button>`, må denne oppførselen derfor gjenskapes med supplerende kode.
 
-Se også til at knapper og lenker inneholder korte og presise tekster, så det er tydelig for brukeren hva en knapp gjør, og hvor en lenke leder.
+Sørg også for at knapper og lenker inneholder korte og presise tekster, så det er tydelig for brukeren hva en knapp gjør, og hvor en lenke leder.
 
 
 

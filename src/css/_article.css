@@ -1,0 +1,5 @@
+.article__date {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-size: var(--fontsize-small);
+}
