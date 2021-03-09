@@ -7,9 +7,10 @@
 <%- include('../_header2.ejs') -%>
 
 
-<h1><%= title %></h1>
+<h1 class="ellers__title"><%= title %></h1>
+<p class="ellers__link" ><a href="<%= url %>" target="_blank" rel="noopener"><%= url %></a></p>
 
-<p class="article__date"><%= date.toISOString().substr(0, 10) %></p>
+<p class="ellers__date"><%= date.toISOString().substr(0, 10) %></p>
 
 <%- body %> 
 

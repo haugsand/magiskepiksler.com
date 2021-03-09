@@ -1,10 +1,8 @@
 ---
 title: Why Highly Efficient Leaders Fail
 date: 2019-02-12
+url: https://hbr.org/2019/02/why-highly-efficient-leaders-fail
 ---
-
-> [https://hbr.org/2019/02/why-highly-efficient-leaders-fail](https://hbr.org/2019/02/why-highly-efficient-leaders-fail)
-
 
 Såkalte **svært effektive** ledere har en tendens til fokusere mer på hva teamet til enhver tid leverer, fremfor å vise omsorg for de menneskene som teamet faktsk består av. Aktiviteter som er ment å bygge relasjoner og inspirere teamet, sees ofte på som en **ren utgift** som svekker teamets leveranseevne. 
 

@@ -47,7 +47,7 @@ Siden vi kommer til å jobbe med det samme bildet i flere størrelser, legger je
 <img src="horse_1080.jpg" alt="">
 ```
 
-<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-1" target="_blank" rel="noopener">&rarr; Eksempel 1</a>
+<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-1" class="blocklink" target="_blank" rel="noopener">Eksempel 1</a>
 
 
 Kodesnutten ovenfor er enkel, og antageligvis velkjent, men den har en svakhet. Når bildet lastes ned, vil du oppleve at [nettsidens layout hopper](https://web.dev/optimize-cls/).
@@ -70,7 +70,7 @@ For å unngå dette, kan du angi bildets dimensjoner ved å legge til attributte
 <img src="horse_1080.jpg" width="1080" height="720" alt="">
 ```
 
-<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-2" target="_blank" rel="noopener">&rarr; Eksempel 2</a>
+<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-2" class="blocklink" class="blocklink" target="_blank" rel="noopener">Eksempel 2</a>
 
 
 
@@ -115,7 +115,7 @@ img {
 }
 ```
 
-<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-3" target="_blank" rel="noopener">&rarr; Eksempel 3</a>
+<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-3" class="blocklink" target="_blank" rel="noopener">Eksempel 3</a>
 
 
 <p class="p-info">
@@ -159,7 +159,7 @@ I vårt tilfelle legger vi til `srcset="horse_2160.jpg 2x"`, som forteller at `h
   width="1080" height="720" alt="">
 ```
 
-<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-4" target="_blank" rel="noopener">&rarr; Eksempel 4</a>
+<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-4" class="blocklink" target="_blank" rel="noopener">Eksempel 4</a>
 
 
 
@@ -212,7 +212,7 @@ Bruk `srcset` for å angi én eller flere bildefiler, og `media` for å legge ti
 </picture>
 ```
 
-<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-5" target="_blank" rel="noopener">&rarr; Eksempel 5</a>
+<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-5" class="blocklink" target="_blank" rel="noopener">Eksempel 5</a>
 
  Det er et krav om at `<picture>` skal inneholde _nøyaktig ett_  `<img>`-element. Vær også oppmerksom på at attributtene `width`, `height`, `alt` og `src` kun skal angis på `<img>`-elementet, og ikke på noen av `<source>`-elementene.
 
@@ -264,7 +264,7 @@ Vi har også et annet triks på lur, &laquo;[lazy loading](https://developer.moz
 </picture>
 ```
 
-<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-6" target="_blank" rel="noopener">&rarr; Eksempel 6</a>
+<a href="/eksempler/veien_til_detaljrike_og_responsive_bilder_som_laster_raskt.html#eksempel-6" class="blocklink" target="_blank" rel="noopener">Eksempel 6</a>
 
 
 ***
