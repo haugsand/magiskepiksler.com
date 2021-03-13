@@ -18,7 +18,8 @@
 }
 
 .articlelist__date {
-  font-size: var(--fontsize-small);
+  font-size: var(--fontsize-tiny);
+  line-height: var(--lineheight-tiny);
   margin-bottom: 0;
 }
 

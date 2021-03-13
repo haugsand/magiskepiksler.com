@@ -66,12 +66,14 @@ html {
   --purple-800: #75003a;
   --purple-900: #5c002e;
 
+  --fontsize-tiny: 1rem; /* 16px */
   --fontsize-small: 1.125rem; /* 18px */
   --fontsize-normal: 1.25rem; /* 20px */
   --fontsize-header: 1.75rem; /* 28px */
   --fontsize-title: 2.75rem; /* 44px */
 
-  --lineheight-small: 2rem; /* 31px */
+  --lineheight-tiny: 1.5rem; /* 24px */
+  --lineheight-small: 2rem; /* 32px */
   --lineheight-normal: 2rem; /* 32px */
   --lineheight-header: 2.5rem; /* 40px */
   --lineheight-title: 4rem; /* 64px */
@@ -92,11 +94,13 @@ html {
 
 @media (max-width: 48em) {
   html {
+    --fontsize-tiny: 0.75rem; /* 12px */
     --fontsize-small: 0.875rem; /* 14px */
     --fontsize-normal: 1rem; /* 16px */
     --fontsize-header: 1.5rem; /* 24px */
     --fontsize-title: 2rem; /* 32px */
 
+    --lineheight-tiny: 1rem; /* 16px */
     --lineheight-small: 1.5rem; /* 24px */
     --lineheight-normal: 1.5rem; /* 24px */
     --lineheight-header: 2rem; /* 32px */
@@ -111,14 +115,12 @@ html {
     --space-xl: 3rem; /* 48px */
     --space-xxl: 4.5rem; /* 72px */
     --space-xxxl: 6rem; /* 96px */
-
   }
 }
 
 body {
   background: var(--white);
   color: var(--grey-800);
-  font-family: "IBM Plex Sans", sans-serif;
   font-size: var(--fontsize-normal);
   font-weight: 300;
   line-height: var(--lineheight-normal);
@@ -141,9 +143,14 @@ body {
 }
 
 main {
+  margin-bottom: var(--space-xxxl);
+}
+
+main > * {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 45rem;
-  margin: 0 auto var(--space-xxxl) auto;
-  padding: 0 7%;
+  width: 86%;
 }
 
 h1 {
@@ -175,10 +182,13 @@ p {
 }
 
 .p-info {
-  background-color: #FEFEDF;
+  background-color: #fefedf;
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
   font-size: var(--fontsize-small);
   line-height: var(--lineheight-small);
   padding: var(--space-xs) var(--space-s);
+  box-sizing: border-box;
 }
 
 .p-info + .p-info {
@@ -216,13 +226,14 @@ strong {
 }
 
 em {
-  color: var(--purple-500);
   font-weight: 400;
+  font-style: normal;
 }
 
 a {
   color: var(--blue-600);
-  transition: border-color 0.3s, color 0.3s, background-color 0.3s, text-decoration 0.3s;
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s,
+    text-decoration 0.3s;
   text-decoration: underline var(--blue-300) solid 0.0625rem;
   text-underline-offset: 0.1875rem;
 }
@@ -240,13 +251,15 @@ a:focus {
 }
 
 .blocklink {
-  background: var(--blue-500) url("/gfx/pixel-arrow.svg") no-repeat top 50% right var(--space-xs);
+  background: var(--blue-500) url("/gfx/pixel-arrow.svg") no-repeat top 50%
+    right var(--space-xs);
   color: var(--white);
   display: inline-block;
   font-size: var(--fontsize-small);
   font-weight: 400;
   line-height: var(--lineheight-small);
-  padding: var(--space-xxs) calc(var(--space-xs) + 1.5rem) var(--space-xxs) var(--space-xs);
+  padding: var(--space-xxs) calc(var(--space-xs) + 1.5rem) var(--space-xxs)
+    var(--space-xs);
   text-decoration: none;
 }
 
@@ -261,12 +274,11 @@ a:focus {
 }
 
 code {
-  color: var(--grey-600);
-  font-weight: 400;
-  font-family: "IBM Plex Mono", monospace;
+  color: var(--brown-900);
+  font-weight: 300;
   font-size: var(--fontsize-small);
   padding: var(--space-xxxs);
-  background-color: var(--grey-50);
+  background-color: var(--brown-50);
 }
 
 a code,
@@ -283,19 +295,26 @@ h4 code {
 }
 
 pre {
-  background-color: var(--grey-700);
+  background-color: var(--brown-50);
+  margin-top: var(--space-m);
   margin-bottom: var(--space-m);
   font-size: var(--fontsize-small);
-  padding: var(--space-xs) var(--space-s);
+  padding: var(--space-xs) 0;
   overflow-x: auto;
-  border-radius: var(--space-xxxs);
+  max-width: none;
+  width: 100%;
 }
 
 pre code {
   background: none;
   font-size: inherit;
   padding: 0;
-  color: var(--grey-50);
+  color: var(--brown-900);
+  max-width: 45rem;
+  width: calc(86%);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 blockquote {
@@ -319,7 +338,8 @@ img {
 }
 
 figure {
-  margin: var(--space-xl) 0;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 figure img {
@@ -338,5 +358,5 @@ hr {
   background: url(/gfx/hr.svg) no-repeat 50% 50%;
   border: 0;
   height: var(--space-m);
-  margin: var(--space-xxl) 0;
+  margin: var(--space-xxl) auto;
 }

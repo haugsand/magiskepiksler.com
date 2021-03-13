@@ -16,5 +16,6 @@
 .ellers__date {
   margin-bottom: var(--space-xl);
   text-align: center;
-  font-size: var(--fontsize-small);
+  font-size: var(--fontsize-tiny);
+  line-height: var(--lineheight-tiny);
 }

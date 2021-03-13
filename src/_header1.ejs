@@ -5,25 +5,42 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Magiskepiksler.com er en personlig sandkasse med eksperimenter og artikler relatert til brukeropplevelse (UX) og webutvikling." />
+    >
+    <meta
+      name="description"
+      content="Magiskepiksler.com er en personlig sandkasse med eksperimenter og artikler relatert til brukeropplevelse (UX) og webutvikling."
+    >
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Inconsolata:wght@300&display=block"
+      rel="stylesheet"
+    >
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style type="text/css">
+      body {
+        font-family: "Assistant", sans-serif;
+      }
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+      code {
+        font-family: "Inconsolata", monospace;
+      }
+    </style>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=block"
       rel="stylesheet"
-    />
+      href="/css/index.css?v=<%= root.data.styleVersion %>"
+    >
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=block"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/index.css?v=<%= root.data.styleVersion %>" />
-    <link rel="icon" type="image/png" href="/gfx/favicon-32x32.png" sizes="32x32">
+      rel="icon"
+      type="image/png"
+      href="/gfx/favicon-32x32.png"
+      sizes="32x32"
+    >
 
-
-    <script type="text/javascript" src="/js/script.js?v=<%= root.data.javascriptVersion %>"></script>
+    <script
+      type="text/javascript"
+      src="/js/script.js?v=<%= root.data.javascriptVersion %>"
+    ></script>
+  </head>
+</html>
