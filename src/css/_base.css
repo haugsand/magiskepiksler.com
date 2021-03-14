@@ -94,17 +94,17 @@ html {
 
 @media (max-width: 48em) {
   html {
-    --fontsize-tiny: 0.75rem; /* 12px */
+    --fontsize-tiny: 0.8125rem; /* 13px */
     --fontsize-small: 0.875rem; /* 14px */
-    --fontsize-normal: 1rem; /* 16px */
-    --fontsize-header: 1.5rem; /* 24px */
-    --fontsize-title: 2rem; /* 32px */
+    --fontsize-normal: 0.9375rem; /* 15px */
+    --fontsize-header: 1.25rem; /* 20px */
+    --fontsize-title: 1.75rem; /* 28px */
 
     --lineheight-tiny: 1rem; /* 16px */
     --lineheight-small: 1.5rem; /* 24px */
     --lineheight-normal: 1.5rem; /* 24px */
-    --lineheight-header: 2rem; /* 32px */
-    --lineheight-title: 3rem; /* 48px */
+    --lineheight-header: 1.5rem; /* 24px */
+    --lineheight-title: 2rem; /* 32px */
 
     --space-xxxs: 0.25rem; /* 4px */
     --space-xxs: 0.5rem; /* 8px */
@@ -276,12 +276,11 @@ a:focus {
 }
 
 code {
+  background-color: var(--brown-50);
   color: var(--brown-900);
   font-weight: 300;
   font-size: var(--fontsize-small);
-  font-size: var(--fontsize-small);
-  padding: var(--space-xxxs);
-  background-color: var(--brown-50);
+  padding: calc(var(--space-xxxs) / 2) var(--space-xxxs);
 }
 
 a code,
@@ -324,6 +323,7 @@ blockquote {
   padding-left: var(--space-l);
   position: relative;
   margin-bottom: var(--space-m);
+  box-sizing: border-box;
 }
 
 blockquote::before {
@@ -357,7 +357,7 @@ figcaption {
   line-height: var(--lineheight-small);
   margin-top: var(--space-m);
   text-align: center;
-  color: var(--grey-600);
+  color: var(--grey-500);
   max-width: 45rem;
   width: 86%;
   margin-left: auto;

@@ -1,4 +1,5 @@
 .header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: var(--space-xxl) 7%;
@@ -7,7 +8,6 @@
 .header__logo {
   align-items: center;
   display: flex;
-  height: var(--space-m);
 }
 
 .header__logolink {
@@ -36,10 +36,51 @@
 }
 
 .header__link {
-  border: none;
   font-weight: 500;
   text-decoration: none;
+  display: block;
+  font-size: var(--fontsize-small);
+  line-height: var(--lineheight-small);
+  padding: 0.125rem 0;
+  color: inherit;
+  border-bottom: 0.125rem solid var(--purple-100);
+  border-top: 0.125rem solid transparent;
 }
+
+.header__link:hover {
+  color: inherit;
+}
+
+.header__link::after {
+    content: "";
+    height: 0.125rem;
+    width: 0;
+    background: var(--purple-400);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s width;
+}
+
+.header__link:hover::after {
+  width: 100%;
+}
+
+
+.page--innlegg .header__link--innlegg,
+.page--ellers .header__link--ellers,
+.page--kolofon .header__link--kolofon {
+  border-bottom-color: transparent;
+  color: var(--purple-500);
+}
+
+
+.header__link:focus {
+  background-color: var(--purple-100);
+  outline: var(--purple-100) solid thin;
+}
+
+
 
 @media (max-width: 35em) {
   .header {
