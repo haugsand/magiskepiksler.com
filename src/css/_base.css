@@ -31,7 +31,7 @@ html {
   --red-900: #590000;
 
   /* hue = 30 */
-  --brown-50: #fefaf5;
+  --brown-50: #fef7f1;
   --brown-100: #feeedf;
   --brown-200: #fedbb8;
   --brown-300: #fdc791;
@@ -221,13 +221,14 @@ li::before {
   top: calc(var(--space-m) * 0.375);
 }
 
-strong {
+em {
   font-weight: 500;
+  font-style: normal;
 }
 
-em {
-  font-weight: 400;
-  font-style: normal;
+strong {
+  font-weight: 500;
+  background-color: #fefedf;
 }
 
 a {
@@ -236,6 +237,7 @@ a {
     text-decoration 0.3s;
   text-decoration: underline var(--blue-300) solid 0.0625rem;
   text-underline-offset: 0.1875rem;
+  font-weight: 400;
 }
 
 a:hover {
@@ -277,6 +279,7 @@ code {
   color: var(--brown-900);
   font-weight: 300;
   font-size: var(--fontsize-small);
+  font-size: var(--fontsize-small);
   padding: var(--space-xxxs);
   background-color: var(--brown-50);
 }
@@ -307,7 +310,7 @@ pre {
 
 pre code {
   background: none;
-  font-size: inherit;
+  font-size: 1em;
   padding: 0;
   color: var(--brown-900);
   max-width: 45rem;
@@ -340,6 +343,8 @@ img {
 figure {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
+  max-width: none;
+  width: 100%;
 }
 
 figure img {
@@ -349,9 +354,14 @@ figure img {
 
 figcaption {
   font-size: var(--fontsize-small);
+  line-height: var(--lineheight-small);
   margin-top: var(--space-m);
   text-align: center;
   color: var(--grey-600);
+  max-width: 45rem;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr {

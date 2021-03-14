@@ -23,9 +23,9 @@
 
 .footer__link {
   align-items: center;
-  border-bottom: 0;
   color: var(--grey-800);
   display: flex;
+  text-decoration: none;
 }
 
 .footer__link img {
