@@ -1,0 +1,23 @@
+.ellers__title {
+  font-size: var(--fontsize-header);
+  line-height: var(--lineheight-header);
+  margin-bottom: var(--space-xxs);
+}
+
+.ellers__link {
+  text-align: center;
+  font-size: var(--fontsize-small);
+}
+
+.ellers__link > a {
+    color: var(--grey-500);
+}
+
+.ellers__date {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-size: var(--fontsize-small);
+  line-height: var(--lineheight-small);
+  font-weight: 400;
+  color: var(--grey-500);
+}

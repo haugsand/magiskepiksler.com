@@ -31,7 +31,7 @@ html {
   --red-900: #590000;
 
   /* hue = 30 */
-  --brown-50: #fefaf5;
+  --brown-50: #fef7f1;
   --brown-100: #feeedf;
   --brown-200: #fedbb8;
   --brown-300: #fdc791;
@@ -66,12 +66,14 @@ html {
   --purple-800: #75003a;
   --purple-900: #5c002e;
 
-  --fontsize-small: 1rem; /* 16px */
+  --fontsize-tiny: 1rem; /* 16px */
+  --fontsize-small: 1.125rem; /* 18px */
   --fontsize-normal: 1.25rem; /* 20px */
   --fontsize-header: 1.75rem; /* 28px */
   --fontsize-title: 2.75rem; /* 44px */
 
-  --lineheight-small: 1.5rem; /* 24px */
+  --lineheight-tiny: 1.5rem; /* 24px */
+  --lineheight-small: 2rem; /* 32px */
   --lineheight-normal: 2rem; /* 32px */
   --lineheight-header: 2.5rem; /* 40px */
   --lineheight-title: 4rem; /* 64px */
@@ -92,15 +94,17 @@ html {
 
 @media (max-width: 48em) {
   html {
-    --fontsize-small: 0.75rem; /* 12px */
-    --fontsize-normal: 1rem; /* 16px */
-    --fontsize-header: 1.5rem; /* 24px */
-    --fontsize-title: 2rem; /* 32px */
+    --fontsize-tiny: 0.8125rem; /* 13px */
+    --fontsize-small: 0.875rem; /* 14px */
+    --fontsize-normal: 0.9375rem; /* 15px */
+    --fontsize-header: 1.25rem; /* 20px */
+    --fontsize-title: 1.75rem; /* 28px */
 
-    --lineheight-small: 1rem; /* 16px */
+    --lineheight-tiny: 1rem; /* 16px */
+    --lineheight-small: 1.5rem; /* 24px */
     --lineheight-normal: 1.5rem; /* 24px */
-    --lineheight-header: 2rem; /* 32px */
-    --lineheight-title: 3rem; /* 48px */
+    --lineheight-header: 1.5rem; /* 24px */
+    --lineheight-title: 2rem; /* 32px */
 
     --space-xxxs: 0.25rem; /* 4px */
     --space-xxs: 0.5rem; /* 8px */
@@ -111,14 +115,12 @@ html {
     --space-xl: 3rem; /* 48px */
     --space-xxl: 4.5rem; /* 72px */
     --space-xxxl: 6rem; /* 96px */
-
   }
 }
 
 body {
   background: var(--white);
   color: var(--grey-800);
-  font-family: "IBM Plex Sans", sans-serif;
   font-size: var(--fontsize-normal);
   font-weight: 300;
   line-height: var(--lineheight-normal);
@@ -141,9 +143,14 @@ body {
 }
 
 main {
+  margin-bottom: var(--space-xxxl);
+}
+
+main > * {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 45rem;
-  margin: 0 auto var(--space-xxxl) auto;
-  padding: 0 7%;
+  width: 86%;
 }
 
 h1 {
@@ -175,10 +182,13 @@ p {
 }
 
 .p-info {
-  background-color: #FEFEDF;
+  background-color: #fefedf;
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
   font-size: var(--fontsize-small);
   line-height: var(--lineheight-small);
   padding: var(--space-xs) var(--space-s);
+  box-sizing: border-box;
 }
 
 .p-info + .p-info {
@@ -211,25 +221,29 @@ li::before {
   top: calc(var(--space-m) * 0.375);
 }
 
-strong {
+em {
   font-weight: 500;
+  font-style: normal;
 }
 
-em {
-  color: var(--purple-500);
-  font-weight: 400;
+strong {
+  font-weight: 500;
+  background-color: #fefedf;
 }
 
 a {
   color: var(--blue-600);
-  transition: border-color 0.3s, color 0.3s;
-  text-decoration: none;
-  border-bottom: thin solid var(--blue-300);
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s,
+    text-decoration 0.3s;
+  text-decoration: underline var(--blue-300) solid 0.0625rem;
+  text-underline-offset: 0.1875rem;
+  font-weight: 400;
 }
 
 a:hover {
   color: var(--blue-800);
-  border-color: var(--blue-500);
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.125rem;
 }
 
 a:focus {
@@ -238,13 +252,35 @@ a:focus {
   outline-offset: 0;
 }
 
-code {
-  color: var(--grey-600);
-  font-weight: 400;
-  font-family: "IBM Plex Mono", monospace;
+.blocklink {
+  background: var(--blue-500) url("/gfx/pixel-arrow.svg") no-repeat top 50%
+    right var(--space-xs);
+  color: var(--white);
+  display: inline-block;
   font-size: var(--fontsize-small);
-  padding: var(--space-xxxs);
-  background-color: var(--grey-50);
+  font-weight: 400;
+  line-height: var(--lineheight-small);
+  padding: var(--space-xxs) calc(var(--space-xs) + 1.5rem) var(--space-xxs)
+    var(--space-xs);
+  text-decoration: none;
+}
+
+.blocklink:hover {
+  background-color: var(--blue-600);
+  color: var(--white);
+}
+
+.blocklink:focus {
+  background-color: var(--blue-700);
+  outline: var(--blue-700) solid thin;
+}
+
+code {
+  background-color: var(--brown-50);
+  color: var(--brown-900);
+  font-weight: 300;
+  font-size: var(--fontsize-small);
+  padding: calc(var(--space-xxxs) / 2) var(--space-xxxs);
 }
 
 a code,
@@ -261,25 +297,33 @@ h4 code {
 }
 
 pre {
-  background-color: var(--grey-700);
+  background-color: var(--brown-50);
+  margin-top: var(--space-m);
   margin-bottom: var(--space-m);
   font-size: var(--fontsize-small);
-  padding: var(--space-xs) var(--space-s);
+  padding: var(--space-xs) 0;
   overflow-x: auto;
-  border-radius: var(--space-xxxs);
+  max-width: none;
+  width: 100%;
 }
 
 pre code {
   background: none;
-  font-size: inherit;
+  font-size: 1em;
   padding: 0;
-  color: var(--grey-50);
+  color: var(--brown-900);
+  max-width: 45rem;
+  width: calc(86%);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 blockquote {
   padding-left: var(--space-l);
   position: relative;
   margin-bottom: var(--space-m);
+  box-sizing: border-box;
 }
 
 blockquote::before {
@@ -297,7 +341,10 @@ img {
 }
 
 figure {
-  margin: var(--space-xl) 0;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  max-width: none;
+  width: 100%;
 }
 
 figure img {
@@ -307,14 +354,19 @@ figure img {
 
 figcaption {
   font-size: var(--fontsize-small);
+  line-height: var(--lineheight-small);
   margin-top: var(--space-m);
   text-align: center;
-  color: var(--grey-600);
+  color: var(--grey-500);
+  max-width: 45rem;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr {
   background: url(/gfx/hr.svg) no-repeat 50% 50%;
   border: 0;
   height: var(--space-m);
-  margin: var(--space-xxl) 0;
+  margin: var(--space-xxl) auto;
 }
