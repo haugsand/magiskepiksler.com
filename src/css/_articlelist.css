@@ -20,6 +20,8 @@
 .articlelist__date {
   font-size: var(--fontsize-tiny);
   line-height: var(--lineheight-tiny);
+  font-weight: 400;
+  color: var(--grey-500);
   margin-bottom: 0;
 }
 
