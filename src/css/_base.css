@@ -235,7 +235,9 @@ a {
   color: var(--blue-600);
   transition: border-color 0.3s, color 0.3s, background-color 0.3s,
     text-decoration 0.3s;
-  text-decoration: underline var(--blue-300) solid 0.0625rem;
+  text-decoration: underline;
+  text-decoration-color: var(--blue-300);
+  text-decoration-thickness: 0.0625rem;
   text-underline-offset: 0.1875rem;
   font-weight: 400;
 }
@@ -253,26 +255,30 @@ a:focus {
 }
 
 .blocklink {
-  background: var(--blue-500) url("/gfx/pixel-arrow.svg") no-repeat top 50%
-    right var(--space-xs);
-  color: var(--white);
+  background-color: var(--blue-100);
   display: inline-block;
   font-size: var(--fontsize-small);
-  font-weight: 400;
+  font-weight: 300;
   line-height: var(--lineheight-small);
-  padding: var(--space-xxs) calc(var(--space-xs) + 1.5rem) var(--space-xxs)
-    var(--space-xs);
-  text-decoration: none;
+  padding: var(--space-xxs) var(--space-xs);
+  position: relative;
 }
 
-.blocklink:hover {
-  background-color: var(--blue-600);
-  color: var(--white);
+.blocklink::after {
+  content: "";
+  width: 1.5rem;
+  height: 100%;
+  background: url("/gfx/arrow-right.svg") no-repeat 100% 50%;
+  position: absolute;
+  right: -1.5rem;
+  top: 0;
 }
+
 
 .blocklink:focus {
-  background-color: var(--blue-700);
-  outline: var(--blue-700) solid thin;
+  background-color: var(--blue-100);
+  outline: none;
+  color: var(--grey-800);
 }
 
 code {
