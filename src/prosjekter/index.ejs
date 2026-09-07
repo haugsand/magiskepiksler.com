@@ -1,0 +1,22 @@
+<%- include('../_header1.ejs', { sidetittel: 'Prosjekter', beskrivelse: 'Små apper og eksperimenter jeg har laget på fritiden.', sti: '/prosjekter/', kropp: 'page--prosjekter' }) -%>
+
+<%- include('../_header2.ejs') -%>
+
+<section class="prosjekter">
+
+    <h1 class="articlelist__header">Prosjekter</h1>
+
+    <p class="articlelist__description">Små apper og eksperimenter jeg har laget på fritiden.</p>
+
+    <% for (const [, {title, url, ikon, body}] of Object.entries(root.prosjekter).sort((a, b) => a[1].rekkefolge - b[1].rekkefolge)) { %>
+    <article class="prosjekter__project">
+        <img class="prosjekter__icon" src="<%= ikon %>" alt="" width="72" height="72">
+        <p class="prosjekter__title">
+            <a href="<%= url %>" target="_blank" rel="noopener"><%= title %></a>
+        </p>
+        <div class="prosjekter__description"><%- body %></div>
+    </article>
+    <% } -%>
+</section>
+
+<%- include('../_footer.ejs') -%>

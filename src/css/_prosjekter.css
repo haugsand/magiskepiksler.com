@@ -1,0 +1,22 @@
+.prosjekter__project {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.prosjekter__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: block;
+  margin: 0 auto var(--space-xs);
+}
+
+.prosjekter__title {
+  font-size: var(--fontsize-header);
+  line-height: var(--lineheight-header);
+  font-weight: 400;
+  margin-bottom: var(--space-xxs);
+}
+
+.prosjekter__description > p:last-child {
+  margin-bottom: 0;
+}
