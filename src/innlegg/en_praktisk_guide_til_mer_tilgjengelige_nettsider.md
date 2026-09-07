@@ -313,7 +313,7 @@ Det er ikke tilstrekkelig at teksten er visuelt i nærheten av kontrollen. Tekst
 
 <figure>
 
-<img src="/img/etternavn-label-input.svg" alt="En tekstlie labelen Etternavn står rett ovenfor et input-felt " width="256" height="64">
+<img src="/img/etternavn-label-input.svg" alt="En tekstlig label med teksten Etternavn står rett ovenfor et input-felt" width="256" height="64">
 <figcaption>Eksempel på en label ved siden av input-felt.</figcaption>
 
 </figure>

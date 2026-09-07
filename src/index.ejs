@@ -1,15 +1,6 @@
-<%- include('_header1.ejs') -%>
-
-<title>Innlegg | magiskepiksler.com</title>
-
-</head>
-
-<body class="page--innlegg">
+<%- include('_header1.ejs', { sidetittel: 'Innlegg', beskrivelse: 'Egenprodusert innhold om utvikling og design av nettsider på verdensveven.', sti: '/', kropp: 'page--innlegg' }) -%>
 
 <%- include('_header2.ejs') -%>
-
-
-
 
 <section class="articlelist">
 
@@ -19,7 +10,7 @@
 
     <% for (const [name, {date, title}] of Object.entries(innlegg).sort((a, b) => b[1].date - a[1].date)) { %>
     <article class="articlelist__article">
-        <p class="articlelist__date"><%= date.toISOString().substr(0, 10) %></p>
+        <p class="articlelist__date"><% const iso = date.toISOString().slice(0, 10) %><time datetime="<%= iso %>"><%= iso %></time></p>
         <p class="articlelist__title">
             <a href="/innlegg/<%= name %>" class="articlelist__link">
                 <%= title %>
@@ -30,5 +21,3 @@
 </section>
 
 <%- include('_footer.ejs') -%>
-
-

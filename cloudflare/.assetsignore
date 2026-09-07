@@ -4,3 +4,10 @@ img/drafts/
 
 # Fontlisensene hører til i repoet, ikke på nettstedet.
 fonts/*-OFL.txt
+
+# CSS-partialene inlines i index.css og trengs ikke som egne filer.
+css/_*.css
+
+# Ubrukte grafikkfiler.
+gfx/pixel-arrow.svg
+img/footer-focus.svg

@@ -59,8 +59,11 @@ Assistant er en variabel font og dekker vektene 300, 400 og 500 i én fil.
 Inconsolata og Playfair Display er statiske, i henholdsvis vekt 300 og 500 —
 trenger du en annen vekt av dem, må en ny fil hentes.
 
-## Merk
+## Cache-busting
 
-Cache-bustingen av CSS og JavaScript er manuell: `styleVersion` og
-`javascriptVersion` i `src/data.yml` må økes når de filene endres, ellers får
-returnerende besøkende den gamle versjonen.
+`bin/versjoner.mjs` kjører etter tinyjam og legger en innholdshash på
+adressene til `index.css` og `script.js`. Endres en av dem, endres adressen,
+og `_headers` kan derfor cache dem permanent. Ingenting må økes for hånd.
+
+Skriptet stopper bygget hvis det ikke finner noen adresser å versjonere —
+ellers ville filene fått et års caching på en adresse som aldri endrer seg.

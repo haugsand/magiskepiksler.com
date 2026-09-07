@@ -1,3 +1,13 @@
+<%
+  // Sidespesifikke verdier sendes inn av hver enkelt side.
+  // sti utelates for sider som ikke skal ha en kanonisk adresse, som 404.
+  const nettsted = root.data.link;
+  const beskr = locals.beskrivelse
+    ? locals.beskrivelse
+    : 'Magiskepiksler.com er en personlig sandkasse med eksperimenter og artikler relatert til brukeropplevelse (UX) og webutvikling.';
+  const adresse = locals.sti ? nettsted + locals.sti : null;
+  const type = locals.sidetype || 'website';
+-%>
 <!DOCTYPE html>
 <html lang="no">
   <head>
@@ -6,10 +16,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     >
-    <meta
-      name="description"
-      content="Magiskepiksler.com er en personlig sandkasse med eksperimenter og artikler relatert til brukeropplevelse (UX) og webutvikling."
-    >
+
+    <title><%= locals.sidetittel %> | magiskepiksler.com</title>
+    <meta name="description" content="<%= beskr %>">
+<% if (adresse) { -%>
+    <link rel="canonical" href="<%= adresse %>">
+<% } -%>
+
+    <link rel="alternate" type="application/rss+xml" title="Magiske piksler" href="/rss.xml">
+
+    <meta property="og:site_name" content="Magiske piksler">
+    <meta property="og:title" content="<%= locals.sidetittel %>">
+    <meta property="og:description" content="<%= beskr %>">
+    <meta property="og:type" content="<%= type %>">
+    <meta property="og:locale" content="nb_NO">
+<% if (adresse) { -%>
+    <meta property="og:url" content="<%= adresse %>">
+<% } -%>
+    <meta name="twitter:card" content="summary">
 
     <!-- Assistant bærer all brødtekst og Playfair Display alle h1, så begge
          trengs umiddelbart. Inconsolata brukes kun av code, som ikke finnes
@@ -19,19 +43,11 @@
     <link rel="preload" href="/fonts/assistant-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link
-      rel="stylesheet"
-      href="/css/index.css?v=<%= root.data.styleVersion %>"
-    >
-    <link
-      rel="icon"
-      type="image/png"
-      href="/gfx/favicon-32x32.png"
-      sizes="32x32"
-    >
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" href="/gfx/favicon-32x32.png" sizes="32x32">
 
-    <script
-      type="text/javascript"
-      src="/js/script.js?v=<%= root.data.javascriptVersion %>"
-    ></script>
+    <script src="/js/script.js"></script>
 
+  </head>
+
+  <body class="<%= locals.kropp %>">

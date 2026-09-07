@@ -1,6 +1,3 @@
-.articlelist {
-}
-
 .articlelist__header {
   font-size: var(--fontsize-header);
   line-height: var(--lineheight-header);
@@ -30,5 +27,3 @@
   font-weight: 400;
 }
 
-.articlelist__link {
-}

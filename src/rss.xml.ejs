@@ -5,34 +5,45 @@
 <title>Magiske piksler</title>
 <link><%= data.link %></link>
 <description>Magiske piksler feed</description>
+<language>no</language>
 <atom:link href="<%= data.link %>/rss.xml" rel="self" type="application/rss+xml" />
 
-<% 
+<%
 
-    let content = []; 
+    // Innleggene mutert direkte ville endret objektene andre templates
+    // leser. Bygger derfor egne oppføringer.
+    const content = [];
 
-    Object.keys(innlegg).forEach(key => {
-        innlegg[key].type = 'innlegg';
-        innlegg[key].name = key;
-        content.push(innlegg[key]);
-    })
+    for (const [name, item] of Object.entries(innlegg)) {
+        content.push({ ...item, type: 'innlegg', name });
+    }
 
-    Object.keys(ellers).forEach(key => {
-        ellers[key].type = 'ellers';
-        ellers[key].name = key;
-        content.push(ellers[key]);
-    })
+    for (const [name, item] of Object.entries(ellers)) {
+        content.push({ ...item, type: 'ellers', name });
+    }
+
+    content.sort((a, b) => b.date - a.date);
+
+    // Innholdet er skrevet med relative adresser, som ikke lar seg slå opp
+    // i en feedleser. De gjøres absolutte, og rene ankere pekes tilbake til
+    // artikkelen de hører hjemme i.
+    const absolutt = (html, side) => html
+        .replace(/(href|src)="\/([^"]*)"/g, `$1="${data.link}/$2"`)
+        .replace(/href="#([^"]*)"/g, `href="${side}#$1"`);
 
 %>
-
-<% content.sort((a, b) => b.date - a.date).forEach(item =>  { %>
+<% if (content.length) { %>
+<lastBuildDate><%= content[0].date.toUTCString() %></lastBuildDate>
+<% } %>
+<% content.forEach(item => { const side = `${data.link}/${item.type}/${item.name}`; %>
 <item>
      <title><%= item.title %></title>
-     <link><%= data.link %>/<%= item.type %>/<%= item.name %></link>
+     <link><%= side %></link>
      <!-- guid beholder .html som uendret identitet, slik at eksisterende
           abonnenter ikke får publiserte innlegg presentert som nye. -->
-     <guid isPermaLink="false"><%= data.link %>/<%= item.type %>/<%= item.name %>.html</guid>
-     <description><![CDATA[<%- item.body.trim() %>]]></description>
+     <guid isPermaLink="false"><%= side %>.html</guid>
+     <pubDate><%= item.date.toUTCString() %></pubDate>
+     <description><![CDATA[<%- absolutt(item.body.trim(), side) %>]]></description>
 </item>
 <% }) -%>
 
