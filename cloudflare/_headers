@@ -1,0 +1,15 @@
+# Bilder og grafikk er navngitt etter innhold og endres ikke i etterkant.
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+/gfx/*
+  Cache-Control: public, max-age=31536000, immutable
+/svg/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS og JS er versjonert manuelt via styleVersion i data.yml. Den
+# versjoneringen har glippet før, så disse revalideres framfor å
+# caches permanent.
+/css/*
+  Cache-Control: public, max-age=3600
+/js/*
+  Cache-Control: public, max-age=3600

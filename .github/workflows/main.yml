@@ -1,42 +1,33 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
+  # Bygger uten å deploye, slik at feil fanges opp før de når master.
+  pull_request:
+  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   deploy:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v4
 
-    # Runs a single command using the runners shell
-    - name: Build artifacts
-      run: npx tinyjam src dist
-
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v4
+    - uses: actions/setup-node@v4
       with:
-        name: dist
-        path: dist
+        node-version: 22
+        cache: npm
 
-    ## Upload to ftpserver
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build site
+      run: npm run build
+
+    - name: Deploy to Cloudflare Workers
+      if: github.event_name != 'pull_request'
+      uses: cloudflare/wrangler-action@v3
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "dist"
-        remoteDir: "magiskepiksler.com"
-
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

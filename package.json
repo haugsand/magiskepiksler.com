@@ -2,14 +2,15 @@
     "name": "magiskepiksler.com",
     "version": "1.0.0",
     "description": "",
-    "main": "build/index.html",
+    "main": "dist/index.html",
     "scripts": {
-        "build": "rm -rf build && tinyjam src build",
-        "start": "serve build -l 4000"
+        "build": "rm -rf dist && tinyjam src dist && cp -R cloudflare/. dist/",
+        "start": "npm run build && wrangler dev",
+        "deploy": "npm run build && wrangler deploy"
     },
     "author": "Magnus Haugsand",
     "devDependencies": {
-        "tinyjam": "^0.2.0",
-        "serve": "^11.3.1"
+        "tinyjam": "^0.4.0",
+        "wrangler": "^4.0.0"
     }
 }
