@@ -1,3 +1,6 @@
 # Ukomprimerte originaler brukt til å lage bildene i artikkelen om
 # responsive bilder. De skal ikke publiseres.
 img/drafts/
+
+# Fontlisensene hører til i repoet, ikke på nettstedet.
+fonts/*-OFL.txt
