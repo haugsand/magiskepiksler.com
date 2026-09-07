@@ -11,10 +11,9 @@
 /svg/*
   Cache-Control: public, max-age=31536000, immutable
 
-# CSS og JS er versjonert manuelt via styleVersion i data.yml. Den
-# versjoneringen har glippet før, så disse revalideres framfor å
-# caches permanent.
+# Adressene til CSS og JS bærer en innholdshash, satt av bin/versjoner.js,
+# så en endring gir en ny adresse.
 /css/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=31536000, immutable
 /js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=31536000, immutable

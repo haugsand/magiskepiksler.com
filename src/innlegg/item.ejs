@@ -1,19 +1,22 @@
-<%- include('../_header1.ejs') -%>
+<%
+  // item.ejs får ikke filnavnet, men objektet er det samme som i samlingen,
+  // så identitetssammenligning gir riktig slug også ved like titler.
+  const oppf = Object.entries(root.innlegg).find(([, v]) => v === locals);
+  const slug = oppf ? oppf[0] : null;
 
-<title><%= title %> | magiskepiksler.com</title>
-
-</head>
-
-<body class="page--innlegg">
+  // Første avsnitt, uten markup, som sidebeskrivelse.
+  const forste = (body.match(/<p>(.*?)<\/p>/s) || [, ''])[1]
+    .replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const kort = forste.length > 160 ? forste.slice(0, 157).replace(/\s\S*$/, '') + '…' : forste;
+%>
+<%- include('../_header1.ejs', { sidetittel: title, beskrivelse: kort, sti: slug ? '/innlegg/' + slug : null, sidetype: 'article', kropp: 'page--innlegg' }) -%>
 
 <%- include('../_header2.ejs') -%>
 
-
-
 <h1><%= title %></h1>
 
-<p class="article__date"><%= date.toISOString().substr(0, 10) %></p>
+<p class="article__date"><% const iso = date.toISOString().slice(0, 10) %><time datetime="<%= iso %>"><%= iso %></time></p>
 
-<%- body %> 
+<%- body %>
 
 <%- include('../_footer.ejs') -%>

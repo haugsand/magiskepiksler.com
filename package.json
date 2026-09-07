@@ -4,7 +4,7 @@
     "description": "",
     "main": "dist/index.html",
     "scripts": {
-        "build": "rm -rf dist && tinyjam src dist && cp -R cloudflare/. dist/",
+        "build": "rm -rf dist && tinyjam src dist && cp -R cloudflare/. dist/ && node bin/versjoner.mjs dist",
         "start": "npm run build && wrangler dev",
         "deploy": "npm run build && wrangler deploy"
     },

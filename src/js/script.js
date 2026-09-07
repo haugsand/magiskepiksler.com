@@ -5,8 +5,13 @@ function getRandomInt(min, max) {
 }
 
 
+// Fisher-Yates. En sort() med tilfeldig komparator gir ikke uniform
+// fordeling, og noen piksler ville tent i omtrent samme rekkefølge hver gang.
 function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = getRandomInt(0, i + 1);
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
 
 

@@ -1,19 +1,20 @@
-<%- include('../_header1.ejs') -%>
+<%
+  const oppf = Object.entries(root.ellers).find(([, v]) => v === locals);
+  const slug = oppf ? oppf[0] : null;
 
-<title><%= title %> | magiskepiksler.com</title>
-
-</head>
-
-<body class="page--ellers">
+  const forste = (body.match(/<p>(.*?)<\/p>/s) || [, ''])[1]
+    .replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const kort = forste.length > 160 ? forste.slice(0, 157).replace(/\s\S*$/, '') + '…' : forste;
+%>
+<%- include('../_header1.ejs', { sidetittel: title, beskrivelse: kort, sti: slug ? '/ellers/' + slug : null, sidetype: 'article', kropp: 'page--ellers' }) -%>
 
 <%- include('../_header2.ejs') -%>
 
-
 <h1 class="ellers__title"><%= title %></h1>
-<p class="ellers__link" ><a href="<%= url %>" target="_blank" rel="noopener"><%= url %></a></p>
+<p class="ellers__link"><a href="<%= url %>" target="_blank" rel="noopener"><%= url %></a></p>
 
-<p class="ellers__date"><%= date.toISOString().substr(0, 10) %></p>
+<p class="ellers__date"><% const iso = date.toISOString().slice(0, 10) %><time datetime="<%= iso %>"><%= iso %></time></p>
 
-<%- body %> 
+<%- body %>
 
 <%- include('../_footer.ejs') -%>
