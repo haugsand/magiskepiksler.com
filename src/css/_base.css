@@ -120,6 +120,7 @@ html {
 
 body {
   background: var(--white);
+  font-family: "Assistant", sans-serif;
   color: var(--grey-800);
   font-size: var(--fontsize-normal);
   font-weight: 300;
@@ -154,6 +155,7 @@ main > * {
 }
 
 h1 {
+  font-family: "Playfair Display", serif;
   font-size: var(--fontsize-title);
   line-height: var(--lineheight-title);
   font-weight: 500;
@@ -283,6 +285,7 @@ a:focus {
 
 code {
   background-color: var(--brown-50);
+  font-family: "Inconsolata", monospace;
   color: var(--brown-900);
   font-weight: 300;
   font-size: var(--fontsize-small);

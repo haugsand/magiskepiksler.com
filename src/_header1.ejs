@@ -11,26 +11,13 @@
       content="Magiskepiksler.com er en personlig sandkasse med eksperimenter og artikler relatert til brukeropplevelse (UX) og webutvikling."
     >
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Inconsolata:wght@300&family=Playfair+Display:wght@500&display=block"
-      rel="stylesheet"
-    >
-
-    <style type="text/css">
-      body {
-        font-family: "Assistant", sans-serif;
-      }
-
-      code {
-        font-family: "Inconsolata", monospace;
-      }
-
-      h1 {
-        font-family: "Playfair Display", serif;
-      }
-
-    </style>
+    <!-- Assistant bærer all brødtekst og Playfair Display alle h1, så begge
+         trengs umiddelbart. Inconsolata brukes kun av code, som ikke finnes
+         på alle sider, og lastes derfor først når det faktisk er i bruk.
+         crossorigin er påkrevd også for fonter fra eget domene, fordi de
+         alltid hentes i CORS-modus. -->
+    <link rel="preload" href="/fonts/assistant-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <link
       rel="stylesheet"

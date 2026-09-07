@@ -44,6 +44,21 @@ Katalogen `cloudflare/` kopieres inn i `dist/` under bygging:
 - `_headers` — cache-headere.
 - `.assetsignore` — filer som ikke skal publiseres, som `img/drafts/`.
 
+## Fonter
+
+Fontene ligger i `src/fonts/` og serveres fra samme domene som resten, ikke fra
+Google Fonts. Alle tre er under SIL Open Font License, og lisenstekstene ligger
+ved siden av filene — de publiseres ikke, men skal bli liggende i repoet.
+
+Kun `latin`-subsettet er tatt med, siden alle tegn nettstedet bruker ligger
+under U+00FF. Skriver du innhold med tegn utenfor `unicode-range` i
+`src/css/_fonts.css`, faller nettleseren tilbake til systemfonten for de
+tegnene. Da må subsettet utvides.
+
+Assistant er en variabel font og dekker vektene 300, 400 og 500 i én fil.
+Inconsolata og Playfair Display er statiske, i henholdsvis vekt 300 og 500 —
+trenger du en annen vekt av dem, må en ny fil hentes.
+
 ## Merk
 
 Cache-bustingen av CSS og JavaScript er manuell: `styleVersion` og
