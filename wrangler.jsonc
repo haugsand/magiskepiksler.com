@@ -5,7 +5,9 @@
   "assets": {
     "directory": "./dist",
     // Serverer /innlegg/foo fra foo.html og kanoniserer bort .html.
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    // Serverer 404.html med riktig statuskode for ukjente adresser.
+    "not_found_handling": "404-page"
   },
   "env": {
     // Staging, erstatter dev.magiskepiksler.com
