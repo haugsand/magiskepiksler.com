@@ -1,0 +1,7 @@
+# /innlegg listes på forsiden. Erstatter en JavaScript-redirect.
+/innlegg/  /  301
+
+# Gamle .html-URL-er er permanent flyttet. Uten disse gir Cloudflare
+# en midlertidig redirect, som ikke overfører rangering i søkemotorer.
+/innlegg/:slug.html  /innlegg/:slug  301
+/ellers/:slug.html   /ellers/:slug   301
