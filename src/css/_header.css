@@ -66,6 +66,7 @@
 
 
 .page--innlegg .header__link--innlegg,
+.page--prosjekter .header__link--prosjekter,
 .page--ellers .header__link--ellers,
 .page--kolofon .header__link--kolofon {
   border-bottom-color: transparent;
@@ -89,5 +90,19 @@
 
   .header__logo {
     margin-bottom: var(--space-m);
+  }
+
+  /* Med fire menypunkter er avstanden på --space-xl for vid for en smal
+     telefon. --space-m holder raden innenfor 320 px, og wrap fanger opp
+     et eventuelt femte punkt. margin-en på listepunktene må nulles, ellers
+     legger den seg oppå gap. */
+  .header__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xxs) var(--space-m);
+  }
+
+  .header__listitem {
+    margin-right: 0;
   }
 }
