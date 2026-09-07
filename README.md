@@ -6,6 +6,9 @@ og Markdown i `src/`, publisert på Cloudflare Workers.
 
 ## Lokal utvikling
 
+Krever Node 22 eller nyere, som deklarert i `engines`. Wrangler krever det
+samme, så en eldre versjon vil feile uansett.
+
     npm ci
     npm start
 

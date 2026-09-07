@@ -9,6 +9,9 @@
         "deploy": "npm run build && wrangler deploy"
     },
     "author": "Magnus Haugsand",
+    "engines": {
+        "node": ">=22"
+    },
     "devDependencies": {
         "tinyjam": "^0.4.0",
         "wrangler": "^4.0.0"
