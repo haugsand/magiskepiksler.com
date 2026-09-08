@@ -5,13 +5,19 @@
   margin-bottom: var(--space-l);
 }
 
-/* Den innfelte kantlinja tegnes med outline framfor border, siden border ville
+/* Ikonet skal være like høyt som tittellinja pluss to linjer beskrivelse, med
+   luften mellom dem: 3 linjehøyder + margin-en under tittelen. Regnet ut fra
+   tokens framfor en fast verdi, slik at høyden følger typografien — og siden
+   --lineheight-normal alt skifter ved 48em, trenger ikonet ingen egen
+   overstyring der.
+
+   Den innfelte kantlinja tegnes med outline framfor border, siden border ville
    lagt seg utenfor ikonet. outline-offset måles til linjas ytre kant, så gapet
    inn til ikonkanten blir differansen: 0.25rem - 0.125rem = 0.125rem. */
 .prosjekter__icon {
   flex: 0 0 auto;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: calc(var(--lineheight-normal) * 3 + var(--space-xxxs));
+  height: calc(var(--lineheight-normal) * 3 + var(--space-xxxs));
   outline: 0.125rem solid var(--white);
   outline-offset: -0.25rem;
 }
@@ -32,15 +38,11 @@
   margin-bottom: 0;
 }
 
-/* Et ikon på 72 px spiser for mye av bredden på en smal telefon. Avstanden
-   følger ett hakk ned på skalaen, slik forholdet var før. */
+/* Avstanden følger ett hakk ned på skalaen på smale skjermer, slik forholdet
+   var før. Ikonstørrelsen trenger ingen overstyring: uttrykket over krymper
+   den av seg selv når --lineheight-normal gjør det. */
 @media (max-width: 48em) {
   .prosjekter__project {
     gap: var(--space-s);
-  }
-
-  .prosjekter__icon {
-    width: 3.5rem;
-    height: 3.5rem;
   }
 }
