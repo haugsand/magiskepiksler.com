@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 48 48" role="img" aria-label="Purre app-ikon">
+  <title>Purre — app-ikon</title>
+  <rect width="48" height="48" fill="#ECF0E7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 42 V22 M24 42 V20 M28 42 V22" fill="none" stroke="#8a9a5f" stroke-width="3.4"/>
+    <path d="M20 24 C14 20 12 12 13 6 C18 9 21 15 21 21 Z" fill="#6c7b4d"/>
+    <path d="M28 24 C34 20 36 12 35 6 C30 9 27 15 27 21 Z" fill="#6c7b4d"/>
+    <path d="M24 22 C20 17 20 9 24 4 C28 9 28 17 24 22 Z" fill="#505f2b"/>
+  </g>
+</svg>

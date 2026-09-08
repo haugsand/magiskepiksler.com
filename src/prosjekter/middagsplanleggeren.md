@@ -1,7 +1,7 @@
 ---
 title: Middagsplanleggeren
 url: https://middagsplanleggeren.app
-ikon: https://middagsplanleggeren.app/icon-192.png
+ikon: /img/prosjekter/middagsplanleggeren.svg
 rekkefolge: 3
 ---
 
