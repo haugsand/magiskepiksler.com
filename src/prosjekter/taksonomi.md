@@ -1,7 +1,7 @@
 ---
 title: Taksonomi
 url: https://taksonomi.app
-ikon: https://taksonomi.app/apple-touch-icon.png
+ikon: https://taksonomi.app/icon-192.png
 rekkefolge: 2
 ---
 

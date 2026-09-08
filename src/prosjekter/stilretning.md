@@ -1,7 +1,7 @@
 ---
 title: Stilretning
 url: https://stilretning.haugsand.workers.dev/
-ikon: https://stilretning.haugsand.workers.dev/apple-touch-icon.png
+ikon: https://stilretning.haugsand.workers.dev/icon-192.png
 rekkefolge: 1
 ---
 
