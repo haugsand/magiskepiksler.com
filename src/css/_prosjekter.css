@@ -5,10 +5,15 @@
   margin-bottom: var(--space-l);
 }
 
+/* Den innfelte kantlinja tegnes med outline framfor border, siden border ville
+   lagt seg utenfor ikonet. outline-offset måles til linjas ytre kant, så gapet
+   inn til ikonkanten blir differansen: 0.25rem - 0.125rem = 0.125rem. */
 .prosjekter__icon {
   flex: 0 0 auto;
   width: 4.5rem;
   height: 4.5rem;
+  outline: 0.125rem solid var(--white);
+  outline-offset: -0.25rem;
 }
 
 .prosjekter__text {
