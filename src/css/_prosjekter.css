@@ -1,7 +1,7 @@
 .prosjekter__project {
   display: flex;
-  align-items: flex-start;
-  gap: var(--space-s);
+  align-items: center;
+  gap: var(--space-m);
   margin-bottom: var(--space-l);
 }
 
@@ -32,10 +32,11 @@
   margin-bottom: 0;
 }
 
-/* Et ikon på 72 px spiser for mye av bredden på en smal telefon. */
+/* Et ikon på 72 px spiser for mye av bredden på en smal telefon. Avstanden
+   følger ett hakk ned på skalaen, slik forholdet var før. */
 @media (max-width: 48em) {
   .prosjekter__project {
-    gap: var(--space-xs);
+    gap: var(--space-s);
   }
 
   .prosjekter__icon {
