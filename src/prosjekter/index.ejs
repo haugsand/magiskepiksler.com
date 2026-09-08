@@ -10,7 +10,7 @@
 
     <% for (const [, {title, url, ikon, body}] of Object.entries(root.prosjekter).sort((a, b) => a[1].rekkefolge - b[1].rekkefolge)) { %>
     <article class="prosjekter__project">
-        <img class="prosjekter__icon" src="<%= ikon %>" alt="" width="192" height="192">
+        <img class="prosjekter__icon" src="<%= ikon %>" alt="" width="512" height="512">
         <div class="prosjekter__text">
             <p class="prosjekter__title">
                 <a href="<%= url %>" target="_blank" rel="noopener"><%= title %></a>
