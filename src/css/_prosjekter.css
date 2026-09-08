@@ -1,22 +1,40 @@
 .prosjekter__project {
-  text-align: center;
-  margin-bottom: var(--space-xl);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-s);
+  margin-bottom: var(--space-l);
 }
 
 .prosjekter__icon {
+  flex: 0 0 auto;
   width: 4.5rem;
   height: 4.5rem;
-  display: block;
-  margin: 0 auto var(--space-xs);
 }
 
+.prosjekter__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Tittelen skal ikke rope høyere enn innleggstitlene, som arver brødtekst-
+   størrelsen fra body. Derfor settes bare vekten, som i .articlelist__title. */
 .prosjekter__title {
-  font-size: var(--fontsize-header);
-  line-height: var(--lineheight-header);
   font-weight: 400;
-  margin-bottom: var(--space-xxs);
+  margin-bottom: var(--space-xxxs);
 }
 
 .prosjekter__description > p:last-child {
   margin-bottom: 0;
+}
+
+/* Et ikon på 72 px spiser for mye av bredden på en smal telefon. */
+@media (max-width: 48em) {
+  .prosjekter__project {
+    gap: var(--space-xs);
+  }
+
+  .prosjekter__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
