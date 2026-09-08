@@ -5,11 +5,17 @@
   margin-bottom: var(--space-l);
 }
 
-/* Ikonet skal være like høyt som tittellinja pluss to linjer beskrivelse, med
-   luften mellom dem: 3 linjehøyder + margin-en under tittelen. Regnet ut fra
-   tokens framfor en fast verdi, slik at høyden følger typografien — og siden
-   --lineheight-normal alt skifter ved 48em, trenger ikonet ingen egen
-   overstyring der.
+/* Høyden er 3 linjehøyder + margin-en under tittelen, altså en tittellinje
+   pluss to linjer beskrivelse. Det var det opprinnelige premisset, men ingen
+   av beskrivelsene ble to linjer på brede skjermer, så der er ikonet 32 px
+   høyere enn teksten. Verdien er likevel beholdt: under 48em brekker tekstene
+   til to og tre linjer, og der treffer den godt. Med align-items: center bærer
+   raden overskuddet pent på brede skjermer, mens et lavere tall ville gitt et
+   ikon markert mindre enn teksten på smale.
+
+   Regnet ut fra tokens framfor en fast verdi, slik at høyden følger
+   typografien — og siden --lineheight-normal alt skifter ved 48em, trenger
+   ikonet ingen egen overstyring der.
 
    Den innfelte kantlinja tegnes med outline framfor border, siden border ville
    lagt seg utenfor ikonet. outline-offset måles til linjas ytre kant, så gapet
