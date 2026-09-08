@@ -1,7 +1,7 @@
 ---
 title: Barnegarderoben
 url: https://barnegarderoben.app
-ikon: https://barnegarderoben.app/icon-192.png
+ikon: https://barnegarderoben.app/icons/icon-192.png
 rekkefolge: 4
 ---
 
