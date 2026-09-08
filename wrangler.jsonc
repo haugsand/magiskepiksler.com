@@ -1,7 +1,7 @@
 {
   // Static site: tinyjam renders src/ into build/, which Cloudflare serves
   // as Worker assets. No Worker script, so there is no "main" entry point.
-  "name": "magiskepiksler-com",
+  "name": "magiskepiksler",
   "compatibility_date": "2026-09-08",
   "build": {
     "command": "npm run build"

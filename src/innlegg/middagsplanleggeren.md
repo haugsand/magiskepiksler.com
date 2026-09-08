@@ -12,6 +12,7 @@ Kort om hva appen inneholder og hvilke valg som er gjort underveis
 
 ## Ukeplanlegging
 
+- Ukentlig tema
 
 ## Kokebok
 
@@ -20,4 +21,3 @@ Kort om hva appen inneholder og hvilke valg som er gjort underveis
 
 
 ## Andre valg
-
