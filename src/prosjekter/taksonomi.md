@@ -5,4 +5,4 @@ ikon: https://taksonomi.app/icon-192.png
 rekkefolge: 2
 ---
 
-Et verktøy for å bygge, strukturere og vedlikeholde taksonomier og begrepshierarkier.
+Et ordspill hvor du kombinerer ord som hører til samme kategori.
