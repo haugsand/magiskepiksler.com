@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Stilretning app-ikon">
+  <title>Stilretning — app-ikon</title>
+  <!--
+    Avledet fra appens maskerbare ikon, der merket er krympet for å ligge
+    innenfor PWA-sikkerhetssonen. Her maskerer ingenting, så rutenettet er
+    skalert opp fra 286 til 358 px, altså 70 % av flaten. Forholdet mellom
+    mellomrom og kvadrat er beholdt på 1:6.
+  -->
+  <rect width="512" height="512" fill="#171717"/>
+  <rect x="77" y="77" width="165" height="165" fill="#525252"/>
+  <rect x="270" y="77" width="165" height="165" fill="#525252"/>
+  <rect x="77" y="270" width="165" height="165" fill="#525252"/>
+  <rect x="270" y="270" width="165" height="165" fill="#fafafa"/>
+</svg>

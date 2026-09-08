@@ -1,8 +1,8 @@
 ---
 title: Stilretning
 url: https://stilretning.haugsand.workers.dev/
-ikon: https://stilretning.haugsand.workers.dev/icon-192.png
-rekkefolge: 1
+ikon: /img/prosjekter/stilretning.svg
+rekkefolge: 4
 ---
 
-Et eksperiment som utforsker hvordan visuell stilretning kan settes og gjenbrukes på tvers av grensesnitt.
+Definer en stilretning som designet ditt skal følge.
