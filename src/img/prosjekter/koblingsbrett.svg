@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Koblingsbrett app-ikon">
+  <title>Koblingsbrett — app-ikon</title>
+  <!--
+    Midlertidig ikon. Appens eget ikon var ikke tilgjengelig herfra, så dette
+    er et nøytralt rutenett på 3 x 3 punkter, satt i samme format og palett
+    som stilretning.svg og de andre app-ikonene: 512 x 512, mørk flate, og
+    merket innenfor de midterste 70 %. Byttes ut når det riktige ikonet
+    foreligger, slik ikonene for de andre prosjektene også ble byttet til
+    lokale SVG-er.
+  -->
+  <rect width="512" height="512" fill="#171717"/>
+  <circle cx="137" cy="137" r="40" fill="#525252"/>
+  <circle cx="256" cy="137" r="40" fill="#525252"/>
+  <circle cx="375" cy="137" r="40" fill="#525252"/>
+  <circle cx="137" cy="256" r="40" fill="#525252"/>
+  <circle cx="256" cy="256" r="40" fill="#fafafa"/>
+  <circle cx="375" cy="256" r="40" fill="#525252"/>
+  <circle cx="137" cy="375" r="40" fill="#525252"/>
+  <circle cx="256" cy="375" r="40" fill="#525252"/>
+  <circle cx="375" cy="375" r="40" fill="#525252"/>
+</svg>
