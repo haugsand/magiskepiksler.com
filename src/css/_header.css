@@ -67,7 +67,7 @@
 
 .page--innlegg .header__link--innlegg,
 .page--jobb .header__link--jobb,
-.page--prosjekter .header__link--prosjekter {
+.page--hobby .header__link--hobby {
   border-bottom-color: transparent;
   color: var(--purple-500);
 }

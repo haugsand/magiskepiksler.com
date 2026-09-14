@@ -1,7 +1,7 @@
 ---
 title: Stilretning
 url: https://stilretning.haugsand.workers.dev/
-ikon: /img/prosjekter/stilretning.svg
+ikon: /img/hobby/stilretning.svg
 rekkefolge: 4
 ---
 

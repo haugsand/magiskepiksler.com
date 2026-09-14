@@ -1,4 +1,4 @@
-.prosjekter__project {
+.hobby__project {
   display: flex;
   align-items: center;
   gap: var(--space-m);
@@ -20,7 +20,7 @@
    Den innfelte kantlinja tegnes med outline framfor border, siden border ville
    lagt seg utenfor ikonet. outline-offset måles til linjas ytre kant, så gapet
    inn til ikonkanten blir differansen: 0.25rem - 0.125rem = 0.125rem. */
-.prosjekter__icon {
+.hobby__icon {
   flex: 0 0 auto;
   width: calc(var(--lineheight-normal) * 3 + var(--space-xxxs));
   height: calc(var(--lineheight-normal) * 3 + var(--space-xxxs));
@@ -28,19 +28,19 @@
   outline-offset: -0.25rem;
 }
 
-.prosjekter__text {
+.hobby__text {
   flex: 1 1 auto;
   min-width: 0;
 }
 
 /* Tittelen skal ikke rope høyere enn innleggstitlene, som arver brødtekst-
    størrelsen fra body. Derfor settes bare vekten, som i .articlelist__title. */
-.prosjekter__title {
+.hobby__title {
   font-weight: 400;
   margin-bottom: var(--space-xxxs);
 }
 
-.prosjekter__description > p:last-child {
+.hobby__description > p:last-child {
   margin-bottom: 0;
 }
 
@@ -48,7 +48,7 @@
    var før. Ikonstørrelsen trenger ingen overstyring: uttrykket over krymper
    den av seg selv når --lineheight-normal gjør det. */
 @media (max-width: 48em) {
-  .prosjekter__project {
+  .hobby__project {
     gap: var(--space-s);
   }
 }

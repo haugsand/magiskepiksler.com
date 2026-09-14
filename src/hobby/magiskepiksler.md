@@ -1,7 +1,7 @@
 ---
 title: Magiskepiksler
 url: /
-ikon: /img/prosjekter/magiskepiksler.svg
+ikon: /img/hobby/magiskepiksler.svg
 rekkefolge: 5
 ---
 

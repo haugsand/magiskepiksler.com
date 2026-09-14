@@ -1,7 +1,7 @@
 ---
 title: Koblingsbrett
 url: https://koblingsbrett.haugsand.workers.dev/
-ikon: /img/prosjekter/koblingsbrett.svg
+ikon: /img/hobby/koblingsbrett.svg
 rekkefolge: 6
 ---
 

@@ -2,6 +2,12 @@
 /innlegg/  /  301
 /ellers/   /  301
 
+# Seksjonen het Prosjekter til den ble døpt om til Hobby. Begge skrivemåtene
+# av den gamle adressen er tatt med, siden lenker utenfra kan ha hvilken som
+# helst av dem.
+/prosjekter   /hobby/  301
+/prosjekter/  /hobby/  301
+
 # Gamle .html-URL-er er permanent flyttet. Uten disse gir Cloudflare
 # en midlertidig redirect, som ikke overfører rangering i søkemotorer.
 /innlegg/:slug.html  /innlegg/:slug  301

@@ -1,0 +1,27 @@
+<%- include('../_header1.ejs', { sidetittel: 'Hobby', beskrivelse: 'Små apper og eksperimenter jeg har laget på fritiden.', sti: '/hobby/', kropp: 'page--hobby' }) -%>
+
+<%- include('../_header2.ejs') -%>
+
+<section class="hobby">
+
+    <h1 class="articlelist__header">Hobby</h1>
+
+    <p class="articlelist__description">Små apper og eksperimenter jeg har laget på fritiden.</p>
+
+    <% for (const [, {title, url, ikon, body}] of Object.entries(root.hobby).sort((a, b) => a[1].rekkefolge - b[1].rekkefolge)) {
+         // Appene ligger på egne domener og åpnes i ny fane. Magiskepiksler er
+         // dette nettstedet selv, og en intern adresse skal bli i samme fane.
+         const ekstern = !url.startsWith('/'); %>
+    <article class="hobby__project">
+        <img class="hobby__icon" src="<%= ikon %>" alt="" width="512" height="512">
+        <div class="hobby__text">
+            <p class="hobby__title">
+                <a href="<%= url %>"<% if (ekstern) { %> target="_blank" rel="noopener"<% } %>><%= title %></a>
+            </p>
+            <div class="hobby__description"><%- body %></div>
+        </div>
+    </article>
+    <% } -%>
+</section>
+
+<%- include('../_footer.ejs') -%>
