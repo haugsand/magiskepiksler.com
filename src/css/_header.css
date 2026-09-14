@@ -66,8 +66,8 @@
 
 
 .page--innlegg .header__link--innlegg,
-.page--prosjekter .header__link--prosjekter,
-.page--ellers .header__link--ellers {
+.page--ellers .header__link--ellers,
+.page--prosjekter .header__link--prosjekter {
   border-bottom-color: transparent;
   color: var(--purple-500);
 }
