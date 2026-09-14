@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Magiskepiksler app-ikon">
+  <title>Magiskepiksler — app-ikon</title>
+  <!--
+    Monogrammet mp er satt i de samme pikselbokstavene som logoen i
+    _logo.ejs, rute for rute: m over fem kolonner, p over tre, med én tom
+    kolonne imellom. Rutenettet på 9 x 6 ruter à 40 px dekker 360 x 240 px
+    midt på flaten, altså de samme 70 % av bredden som stilretning.svg.
+
+    Fargene er nettstedets egne: grey-900 bak og red-300 på rutene, som i
+    den rosa stripa øverst på hver side. Tokennavnene er skrevet uten de to
+    bindestrekene foran, siden to bindestreker på rad ikke er lov i en
+    XML-kommentar og ville gjort fila uleselig for nettleseren.
+  -->
+  <rect width="512" height="512" fill="#121212"/>
+  <rect x="76" y="136" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="116" y="136" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="196" y="136" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="316" y="136" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="356" y="136" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="76" y="176" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="156" y="176" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="236" y="176" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="316" y="176" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="396" y="176" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="76" y="216" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="156" y="216" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="236" y="216" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="316" y="216" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="396" y="216" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="76" y="256" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="156" y="256" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="236" y="256" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="316" y="256" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="356" y="256" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="76" y="296" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="156" y="296" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="236" y="296" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="316" y="296" width="40" height="40" fill="#ffaaaa"/>
+  <rect x="316" y="336" width="40" height="40" fill="#ffaaaa"/>
+</svg>
