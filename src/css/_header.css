@@ -66,6 +66,7 @@
 
 
 .page--innlegg .header__link--innlegg,
+.page--jobb .header__link--jobb,
 .page--prosjekter .header__link--prosjekter {
   border-bottom-color: transparent;
   color: var(--purple-500);
