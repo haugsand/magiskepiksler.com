@@ -6,7 +6,7 @@
     .replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
   const kort = forste.length > 160 ? forste.slice(0, 157).replace(/\s\S*$/, '') + '…' : forste;
 %>
-<%- include('../_header1.ejs', { sidetittel: title, beskrivelse: kort, sti: slug ? '/ellers/' + slug : null, sidetype: 'article', kropp: 'page--ellers' }) -%>
+<%- include('../_header1.ejs', { sidetittel: title, beskrivelse: kort, sti: slug ? '/ellers/' + slug : null, sidetype: 'article', kropp: 'page--innlegg' }) -%>
 
 <%- include('../_header2.ejs') -%>
 

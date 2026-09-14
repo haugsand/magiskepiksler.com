@@ -1,0 +1,17 @@
+<%
+  // Oppføringene i en liste, sortert med den nyeste først. Innleggene og
+  // ellers-oppføringene står under hver sin overskrift på forsiden, og
+  // listes likt. locals.mappe er katalogen oppføringene lenker til.
+  // Verdier sendt inn i en include ligger på locals, slik _header1.ejs
+  // også leser sine — bare nøklene i rotdataene blir egne variabler.
+-%>
+<% for (const [name, {date, title}] of Object.entries(locals.oppforinger).sort((a, b) => b[1].date - a[1].date)) { %>
+    <article class="articlelist__article">
+        <p class="articlelist__date"><% const iso = date.toISOString().slice(0, 10) %><time datetime="<%= iso %>"><%= iso %></time></p>
+        <p class="articlelist__title">
+            <a href="<%= locals.mappe %>/<%= name %>" class="articlelist__link">
+                <%= title %>
+            </a>
+        </p>
+    </article>
+    <% } -%>

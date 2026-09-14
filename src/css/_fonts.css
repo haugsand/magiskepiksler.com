@@ -28,7 +28,7 @@
     U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Playfair Display brukes kun av h1, i vekt 500. */
+/* Playfair Display brukes av h1 og av .articlelist__header, i vekt 500. */
 @font-face {
   font-family: "Playfair Display";
   font-style: normal;

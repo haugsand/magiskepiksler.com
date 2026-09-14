@@ -1,7 +1,19 @@
+/* Forsiden har to seksjoner, så Ellers-overskriften er en h2 mens Innlegg
+   er sidens h1. Klassen setter derfor hele utseendet selv, framfor å arve
+   font og sentrering fra h1-regelen i _base.css. */
 .articlelist__header {
+  font-family: "Playfair Display", serif;
   font-size: var(--fontsize-header);
   line-height: var(--lineheight-header);
+  font-weight: 500;
   margin-bottom: var(--space-m);
+  text-align: center;
+}
+
+/* Luft som skiller de to listene på forsiden. h2-en har en margin-top fra
+   _base.css, men den gjelder ikke overskriften i seksjonen over. */
+.articlelist--ellers {
+  margin-top: var(--space-xxl);
 }
 
 .articlelist__description {
