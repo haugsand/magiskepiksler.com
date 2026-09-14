@@ -49,7 +49,21 @@
 
 /* Samme markering av gjeldende side som menyen i headeren gir de andre
    seksjonene. Footer-lenkene har ingen understrek å slå av, så fargen
-   står alene. */
+   står alene. Ikonet vises i full styrke, slik hover også gjør det,
+   ellers står et blekt ikon ved siden av en farget tekst. */
 .page--kolofon .footer__link--kolofon {
   color: var(--purple-500);
+}
+
+.page--kolofon .footer__link--kolofon img {
+  filter: none;
+}
+
+@media (max-width: 35em) {
+  /* Med ikon på alle tre lenkene blir raden 322 px, to piksler for bred
+     for en 320 px telefon. Smalere luft mellom punktene holder den på
+     én linje. */
+  .footer__listitem {
+    padding: 0 var(--space-s);
+  }
 }
