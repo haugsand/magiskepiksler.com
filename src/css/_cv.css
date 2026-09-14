@@ -1,12 +1,12 @@
-/* Seksjonene på jobbsiden. h2-en har allerede margin over seg fra _base.css,
+/* Seksjonene på CV-siden. h2-en har allerede margin over seg fra _base.css,
    så seksjonen trenger bare luft under. */
-.jobb__seksjon {
+.cv__seksjon {
   margin-bottom: var(--space-xl);
 }
 
 /* Logolista og medielista er lister uten kulepunkt. li-regelen i _base.css
    setter både innrykk og en firkant foran hvert punkt, og begge nulles. */
-.jobb__logoliste {
+.cv__logoliste {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -14,32 +14,32 @@
   margin-bottom: var(--space-m);
 }
 
-.jobb__logopunkt,
-.jobb__mediepunkt {
+.cv__logopunkt,
+.cv__mediepunkt {
   margin: 0;
   padding: 0;
 }
 
-.jobb__logopunkt::before,
-.jobb__mediepunkt::before {
+.cv__logopunkt::before,
+.cv__mediepunkt::before {
   display: none;
 }
 
 /* Logoene kommer i ulike format, så høyden styrer og bredden følger etter. */
-.jobb__logo {
+.cv__logo {
   display: block;
   height: var(--space-l);
   width: auto;
 }
 
-.jobb__logo--stor {
+.cv__logo--stor {
   height: var(--space-xl);
   margin-top: var(--space-m);
 }
 
 /* Står i stedet for logoen fram til fila er på plass. Rammen gir navnet
    samme tyngde i rekka som en logo ville hatt. */
-.jobb__navn {
+.cv__navn {
   display: block;
   border: 0.0625rem solid var(--grey-100);
   padding: var(--space-xxs) var(--space-xs);
@@ -48,20 +48,20 @@
   white-space: nowrap;
 }
 
-.jobb__medialiste {
+.cv__medialiste {
   margin-bottom: var(--space-m);
 }
 
-.jobb__mediepunkt {
+.cv__mediepunkt {
   margin-bottom: var(--space-s);
 }
 
-.jobb__medielenke {
+.cv__medielenke {
   display: inline-block;
 }
 
 /* Kilden står under tittelen, i samme grå som datoene i artikkellistene. */
-.jobb__kilde {
+.cv__kilde {
   display: block;
   font-size: var(--fontsize-tiny);
   line-height: var(--lineheight-tiny);

@@ -66,8 +66,8 @@
 
 
 .page--innlegg .header__link--innlegg,
-.page--jobb .header__link--jobb,
-.page--hobby .header__link--hobby {
+.page--hobby .header__link--hobby,
+.page--cv .header__link--cv {
   border-bottom-color: transparent;
   color: var(--purple-500);
 }
