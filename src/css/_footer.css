@@ -46,3 +46,10 @@
 .footer__link:hover img {
   filter: none;
 }
+
+/* Samme markering av gjeldende side som menyen i headeren gir de andre
+   seksjonene. Footer-lenkene har ingen understrek å slå av, så fargen
+   står alene. */
+.page--kolofon .footer__link--kolofon {
+  color: var(--purple-500);
+}
