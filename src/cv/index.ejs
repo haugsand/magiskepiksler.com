@@ -3,14 +3,16 @@
   // prosjektene har. Denne siden er eneste leser, og oppføringene har ingen
   // egne sider.
   //
-  // Logoene mangler. De er merkevarer som hører hjemme hos eieren, og de lot
-  // seg ikke hente herfra. Legg fila i src/img/cv/ og sett logo-feltet til
-  // adressen, så bytter navnet seg ut med bildet av seg selv.
+  // Logoene kommer inn én etter én. Legg fila i src/img/cv/ og sett logo til
+  // adressen, så bytter navnet seg ut med bildet av seg selv. bredde og hoyde
+  // er tallene fra svg-ens egen viewBox, ikke størrelsen den vises i — de gir
+  // nettleseren høyde-breddeforholdet, slik at raden ikke hopper mens bildet
+  // lastes. CSS-en bestemmer selve størrelsen.
   const kantegaLogo = null;
   const ixdaLogo = null;
 
   const kunder = [
-    { navn: 'SD Worx', logo: null },
+    { navn: 'SD Worx', logo: '/img/cv/sdworx.svg', bredde: 128, hoyde: 41 },
     { navn: 'Sykehusbygg', logo: null },
     { navn: 'Statens vegvesen', logo: null },
     { navn: 'Fixrate', logo: null },
@@ -62,7 +64,7 @@
 <% kunder.forEach(kunde => { -%>
         <li class="cv__logopunkt">
 <% if (kunde.logo) { -%>
-            <img class="cv__logo" src="<%= kunde.logo %>" alt="<%= kunde.navn %>" width="160" height="60">
+            <img class="cv__logo" src="<%= kunde.logo %>" alt="<%= kunde.navn %>" width="<%= kunde.bredde %>" height="<%= kunde.hoyde %>">
 <% } else { -%>
             <span class="cv__navn"><%= kunde.navn %></span>
 <% } -%>
