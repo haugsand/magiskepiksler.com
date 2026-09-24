@@ -25,11 +25,25 @@
   display: none;
 }
 
-/* Logoene kommer i ulike format, så høyden styrer og bredden følger etter. */
+/* Logoene har svært ulike format: Sykehusbygg er 4,6 ganger så bred som høy,
+   AtB og Relevio er kvadratiske. Med samme høyde til alle ville de to
+   kvadratiske blitt små merker ved siden av de brede ordmerkene. Hver logo
+   får derfor samme boks, og object-fit: contain skalerer merket til å fylle
+   den uten å strekke det: et kvadratisk merke blir like høyt som boksen, et
+   bredt like bredt. Boksen bærer også størrelsen for svg-er uten egne
+   width og height, som ellers ville falt tilbake på 300 x 150 px. */
 .cv__logo {
   display: block;
-  height: var(--space-l);
-  width: auto;
+  width: 10rem;
+  height: var(--space-xl);
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 48em) {
+  .cv__logo {
+    width: 7.5rem;
+  }
 }
 
 .cv__logo--stor {
